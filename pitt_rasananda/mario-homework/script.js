@@ -26,13 +26,13 @@ var marioLivesPositionY = 10;
 var stageBackground = new Image();
 stageBackground.src =
 "https://i.pinimg.com/originals/67/3a/b1/673ab1ddbefd571453dd36f8fc8458ea.jpg";
+
 var marioTexture = new Image();
 marioTexture.src = "http://vignette3.wikia.nocookie.net/fantendo/images/5/58/8bitsprite-1-.png/revision/latest?cb=20151029181053";
 
 var goombaTexture = new Image();
 goombaTexture.src =
 "http://giantbomb1.cbsistatic.com/uploads/scale_super/9/93854/2438851-goomba%20smb%20sprite%20walk%20gif.gif";
-
 
 function update() {
 
@@ -74,13 +74,13 @@ function update() {
     marioLives --;
   }
 
-if(marioPositionX > goombaPositionX + goombaWidth) {
-  goombaPositionX += goombaSpeed;
-}
+    if(marioPositionX > goombaPositionX + goombaWidth) {
+    goombaPositionX += goombaSpeed;
+    }
 
-if(marioPositionX + marioWidth < goombaPositionX) {
-  goombaPositionX -= goombaSpeed;
-}
+    if(marioPositionX + marioWidth < goombaPositionX) {
+    goombaPositionX -= goombaSpeed;
+    }
 
 	//-------------------------------------
 	// END UPDATE LOGIC
@@ -88,21 +88,22 @@ if(marioPositionX + marioWidth < goombaPositionX) {
 	// BEGIN DRAW LOGIC
 	//-------------------------------------
 
-	graphics.clearRect(0, 0, canvas.width, canvas.height)
+    graphics.clearRect(0, 0, canvas.width, canvas.height)
 
-  graphics.drawImage(
-    stageBackground,
-    0 ,0,canvas.width, canvas.height);
+    graphics.drawImage(
+        stageBackground,
+        0 ,0,canvas.width, canvas.height);
 
 	graphics.drawImage(
 		marioTexture,
 		marioPositionX, marioPositionY, marioWidth, marioHeight);
 	//-------------------------------------
 
-  graphics.drawImage(
-    goombaTexture,
-    goombaPositionX, goombaPositionY, goombaWidth, goombaHeight);
+    graphics.drawImage(
+        goombaTexture,
+        goombaPositionX, goombaPositionY, goombaWidth, goombaHeight);
 
+    // draw mario lives
   for (i = 0 ; i < marioLives; i++)
   { 
     graphics.drawImage(
@@ -110,11 +111,9 @@ if(marioPositionX + marioWidth < goombaPositionX) {
       marioLivesPositionX + (i * marioWidth) , marioLivesPositionY , marioWidth, marioHeight
     ); 
   }
-
 	// ask the browser to call the update function again.
 	requestAnimationFrame(update)
 }
-
 
 // DO NOT EDIT BELOW THIS LINE
 //--------------------------------------------------------------------
