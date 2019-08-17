@@ -1,6 +1,9 @@
 var canvas = document.getElementById('canvas');
 var graphics = canvas.getContext('2d');
 
+
+
+
 var marioWidth = 32;
 var marioHeight = 32;
 var marioPositionX = canvas.width / 2;
