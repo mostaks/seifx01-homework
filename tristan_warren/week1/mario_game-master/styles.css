@@ -1,3 +1,10 @@
 canvas {
-	margin-left: 300px;
+	margin: 200px auto 20px auto;
+	display: block;
+	/* Files\mario-background.png */
+}
+
+audio {
+	margin: 0 auto;
+	display: block;
 }

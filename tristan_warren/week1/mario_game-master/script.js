@@ -10,6 +10,7 @@ var gravity = 10;
 var jumpForce = 20;
 var maxJumpForce = 25;
 var jumpForceDecay = 1;
+var marioLives = 3;
 
 var goombaHeight = 40;
 var goombaWidth = 40;
@@ -43,11 +44,13 @@ function update() {
 	// wrap character from left to right side of screen
 	if (marioPositionX < 0) {
 		marioPositionX = canvas.width;
+		marioLives--
 	}
 
 	// make mario wrap from right to left
 	if (marioPositionX > canvas.width) {
 		marioPositionX = 0;
+		marioLives--
 	}
 
 	// apply gravity so the character falls down
@@ -81,6 +84,11 @@ function update() {
 
 	graphics.drawImage(goombaTexture, goombaPositionX, goombaPositionY, goombaHeight, goombaWidth);
 
+	// add lives
+	for (l = 1; l <= marioLives; l++) {
+		graphics.drawImage(marioTexture, canvas.width - 28 * l, 5, marioWidth / 1.5, marioHeight / 1.5);
+	}
+
 	// TODO: create variables for the goomba position and size
 	// use thoes variables to draw the goomba character
 
@@ -102,7 +110,7 @@ var DOWN_KEY = 40;
 // check key down events
 window.addEventListener(
 	'keydown',
-	function(event) {
+	function (event) {
 		keys[event.keyCode] = true;
 	},
 	true
@@ -111,7 +119,7 @@ window.addEventListener(
 // check key release events
 window.addEventListener(
 	'keyup',
-	function(event) {
+	function (event) {
 		keys[event.keyCode] = false;
 	},
 	true
