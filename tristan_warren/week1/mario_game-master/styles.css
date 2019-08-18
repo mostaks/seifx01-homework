@@ -1,5 +1,13 @@
+html * {
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100vh;
+}
+
 canvas {
-	margin: 200px auto 20px auto;
+	margin: 20px auto 20px auto;
 	display: block;
 	/* Files\mario-background.png */
 }

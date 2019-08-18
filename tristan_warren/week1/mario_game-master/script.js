@@ -15,7 +15,7 @@ var marioLives = 3;
 var goombaHeight = 40;
 var goombaWidth = 40;
 var goombaPositionX = 20;
-var goombaPositionY = canvas.height - goombaHeight + 2;
+var goombaPositionY = canvas.height - 1.9 * goombaHeight + 2;
 
 var marioTexture = new Image();
 marioTexture.src =
@@ -23,6 +23,9 @@ marioTexture.src =
 
 var goombaTexture = new Image();
 goombaTexture.src = 'https://i.ya-webdesign.com/images/goomba-transparent-pixel-11.gif';
+
+var wallpaper = new Image();
+wallpaper.src = 'https://wallpapercave.com/wp/wp1907535.jpg';
 
 function update() {
 	// BEGIN UPDATE LOGIC
@@ -44,21 +47,21 @@ function update() {
 	// wrap character from left to right side of screen
 	if (marioPositionX < 0) {
 		marioPositionX = canvas.width;
-		marioLives--
+		marioLives--;
 	}
 
 	// make mario wrap from right to left
 	if (marioPositionX > canvas.width) {
 		marioPositionX = 0;
-		marioLives--
+		marioLives--;
 	}
 
 	// apply gravity so the character falls down
 	marioPositionY += gravity;
 
 	// stop the character from falling down the screen
-	if (marioPositionY > canvas.height - marioHeight) {
-		marioPositionY = canvas.height - marioHeight;
+	if (marioPositionY > canvas.height - 2.13 * marioHeight) {
+		marioPositionY = canvas.height - 2.13 * marioHeight;
 		jumpForce = maxJumpForce;
 	}
 
@@ -79,6 +82,8 @@ function update() {
 	//-------------------------------------
 
 	graphics.clearRect(0, 0, canvas.width, canvas.height);
+
+	graphics.drawImage(wallpaper, 0, 0, canvas.width, canvas.height);
 
 	graphics.drawImage(marioTexture, marioPositionX, marioPositionY, marioWidth, marioHeight);
 
@@ -110,7 +115,7 @@ var DOWN_KEY = 40;
 // check key down events
 window.addEventListener(
 	'keydown',
-	function (event) {
+	function(event) {
 		keys[event.keyCode] = true;
 	},
 	true
@@ -119,7 +124,7 @@ window.addEventListener(
 // check key release events
 window.addEventListener(
 	'keyup',
-	function (event) {
+	function(event) {
 		keys[event.keyCode] = false;
 	},
 	true
