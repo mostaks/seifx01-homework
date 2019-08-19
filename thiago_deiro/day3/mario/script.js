@@ -48,7 +48,7 @@ var livesSpacement = 40;
 
 
 
-
+//
 function update() {
 
 	// BEGIN UPDATE LOGIC
