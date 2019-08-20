@@ -1,16 +1,6 @@
 var canvas = document.getElementById('canvas');
 var graphics = canvas.getContext('2d');
 
-//home work 17.8.9 
-/*var background = new image();
-background.src = "https://image.shutterstock.com/z/stock-photo-pixel-t-rex-on-outdoor-walking-raster-illustration-set-of-trees-and-bush-green-grass-white-cute-1421637986.jpg";
-var backgroundWidth = canvas.width;               
-var backgroundHeight = canvas.height;
-var backgroundPosition = center;*/
-
-var marioTexture = new Image();
-marioTexture.src = "http://vignette3.wikia.nocookie.net/fantendo/images/5/58/8bitsprite-1-.png/revision/latest?cb=20151029181053";
-
 var marioWidth = 32;
 var marioHeight = 32;
 var marioPositionX = canvas.width / 2;
@@ -20,9 +10,7 @@ var gravity = 10;
 var jumpForce = 20;
 var maxJumpForce = 20;
 var jumpForceDecay = 1;
-
-var goombaTexture = new Image();
-goombaTexture.src = "https://i.ya-webdesign.com/images/goomba-transparent-pixel-11.gif";
+var lives = 5;
 
 var goombaWidth = 100;
 var goombaHeight = 100;
@@ -30,20 +18,20 @@ var goombaPositionX = 10;
 var goombaPositionY = canvas.height - goombaHeight;
 var goombaSpeed = 3;
 
-//Home work 17.8.19
-/*var background = new image();
-background.src = "https://image.shutterstock.com/z/stock-photo-pixel-t-rex-on-outdoor-walking-raster-illustration-set-of-trees-and-bush-green-grass-white-cute-1421637986.jpg";
-
 var backgroundWidth = canvas.width;               
 var backgroundHeight = canvas.height;
 var backgroundPositionX = canvas.width;
-var backgroundPositionY = canvas.height;*/
+var backgroundPositionY = canvas.height;
 
-/*var marioLives = new Image;
-  marioLives.src = "http://vignette3.wikia.nocookie.net/fantendo/images/5/58/8bitsprite-1-.png/revision/latest?cb=20151029181053";
-for (var marioLives = 1; i <= 5; i--) {
-graphics.drawImage(marioLives, 32, 32);
-}*/
+var marioTexture = new Image();
+marioTexture.src = "http://vignette3.wikia.nocookie.net/fantendo/images/5/58/8bitsprite-1-.png/revision/latest?cb=20151029181053";
+
+var goombaTexture = new Image();
+goombaTexture.src = "https://i.ya-webdesign.com/images/goomba-transparent-pixel-11.gif";
+
+var stageBackground = new Image();
+stageBackground.src =
+"https://i.pinimg.com/originals/67/3a/b1/673ab1ddbefd571453dd36f8fc8458ea.jpg";
 
 function update() {
 
@@ -71,6 +59,7 @@ function update() {
 	// make mario wrap from right to left
 	if( marioPositionX > canvas.width) {
 		marioPositionX = 0;
+    lives -= 1;
 	}
 
 	// apply gravity so the character falls down
@@ -82,10 +71,6 @@ function update() {
 		jumpForce = maxJumpForce;
 	}
 
-	// TASK:
-	// 1 - make goomba move to the right when mario is on the right side of goomba
-	// 2 - make goomba move to the left with mario is on the left side of goomba
-
 	if (marioPositionX > goombaPositionX + goombaWidth){
 		goombaPositionX += goombaSpeed;
 	}
@@ -93,10 +78,6 @@ function update() {
 	if(marioPositionX + marioWidth < goombaPositionX){
 		goombaPositionX -= goombaSpeed;
 	}
-
-	// we will have a 15 min break at 11:00
-	// when we return, we will get started with splitting this into seperate files
-	// and get started working with git.
 	
 	//-------------------------------------
 	// END UPDATE LOGIC
@@ -106,6 +87,10 @@ function update() {
 
 	graphics.clearRect(0, 0, canvas.width, canvas.height)
 
+  graphics.drawImage(
+    stageBackground, 
+    0,0, canvas.width, canvas.height);
+
 	graphics.drawImage(
 		marioTexture,
 		marioPositionX, marioPositionY, marioWidth, marioHeight);
@@ -114,10 +99,12 @@ function update() {
 		goombaTexture,
 		goombaPositionX, goombaPositionY, goombaWidth, goombaHeight);
 
- /* graphics.drawImage(
-    background, backgroundPositionX, backgroundPositionY, backgroundwidth, backgroundHeight);*/
-  
-
+  // for (initialiser; condition; expression)
+  for(var i=0; i < lives; i++){
+    graphics.drawImage(
+		marioTexture,
+		i*marioWidth, 0, marioWidth, marioHeight);
+  }
 	//-------------------------------------
 
 	// ask the browser to call the update function again.
