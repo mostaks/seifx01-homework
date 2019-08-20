@@ -1,16 +1,19 @@
 var canvas = document.getElementById('canvas');
 var graphics = canvas.getContext('2d');
 
+var floorRise = 70;
+
 var marioWidth = 32;
 var marioHeight = 32;
 var marioPositionX = canvas.width / 2;
-var marioPositionY = canvas.height;
+var marioPositionY = canvas.height - floorRise;
 var marioMoveSpeed = 5;
+
 
 var goombaWidth = 32;
 var goombaHeight = 32;
 var goombaPositionX = 100;
-var goombaPositionY = canvas.height - goombaHeight;
+var goombaPositionY = (canvas.height - goombaHeight) - floorRise;
 var goombaSpeed = marioMoveSpeed +2;
 
 var gravity = 10;
@@ -57,15 +60,14 @@ function update() {
   marioPositionY += gravity;
 
   // stop the character from falling down the screen
-  if(marioPositionY > canvas.height - marioHeight) {
-    marioPositionY = canvas.height - marioHeight; 
+  if(marioPositionY > canvas.height - (floorRise + marioHeight)) {
+    marioPositionY = canvas.height - (floorRise + marioHeight); 
     jumpForce = maxJumpForce;
   } 
 
-  // wrap character from left to right side of the screen. if character goes off, kill off lives
+  // wrap character from left to right side of the screen.
   if(marioPositionX < 0) {
     marioPositionX = canvas.width;
-    marioLives --;
   }
 
   // wrap character from right to left side. if character goes off, kill off lives
