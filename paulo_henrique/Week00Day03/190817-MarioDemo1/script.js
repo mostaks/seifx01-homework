@@ -78,7 +78,7 @@ if (marioPositionX < 0){
  marioPositionX = canvas.width;
 }
 if (marioPositionX > canvas.width){
- marioPositionX = (canvas.width/2) - 300;
+ marioPositionX = (canvas.width/2);
  marioPositionY = canvas.height/2;
  marioLives -= 1;
 }
