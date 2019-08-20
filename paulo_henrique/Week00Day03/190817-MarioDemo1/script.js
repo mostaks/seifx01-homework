@@ -31,8 +31,8 @@ goombaTexture.src = "https://giantbomb1.cbsistatic.com/uploads/scale_super/9/938
 
 var backgroundTexture = new Image();
 backgroundTexture.src = ("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f137efa8-8b54-461c-aa90-a01efa1b7241/d8jq7ea-237407c6-13b0-4aed-a22e-f712e5d6f0ba.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2YxMzdlZmE4LThiNTQtNDYxYy1hYTkwLWEwMWVmYTFiNzI0MVwvZDhqcTdlYS0yMzc0MDdjNi0xM2IwLTRhZWQtYTIyZS1mNzEyZTVkNmYwYmEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-uzsLTXBMZmsfYcB0zMmIvM5e4LDz4N-pyx8_LnRrPA");
-var backgroundHeight = 480;
-var backgroundWhidt= 640;
+var backgroundHeight = canvas.height;
+var backgroundWhidt= canvas.width;
 var backgroundPositionX = 0;
 var backgroundPositionY = 0;
 
@@ -42,7 +42,7 @@ liveTexture.src = "http://vignette3.wikia.nocookie.net/fantendo/images/5/58/8bit
 
 var livePositionX = 10;
 var livePositionY = 5;
-var livesSpacement = 40;
+var livesSpacement = marioWidth +8;
 
 function update() {
 
