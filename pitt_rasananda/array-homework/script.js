@@ -77,4 +77,108 @@ for (i=0; i<foods.length; i++) {
     }
   }
 
+//   Define a function maxOfTwoNumbers that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript. You'll have to remember your pre-work, or do some googling to figure this out.
+function maxOfTwoNumbers(num1,num2) {
+    if(num1 != num2 && num1 > num2) {
+      return num1;
+    } else if (num1 === num2) {
+      return "the two numbers are equal";
+    } else {
+      return num2;
+    }
+  }
+
+  console.log(maxOfTwoNumbers(8,3));
+  console.log(maxOfTwoNumbers(3,3));
+  console.log(maxOfTwoNumbers(1,3));
+
+//   Define a function maxOfThree that takes three numbers as arguments and returns the largest of them.
+
+function maxOfThree(num1,num2,num3) {
+    if(num1 > num2 && num1 > num3) {
+      return num1;
+    } else if (num2 > num1 && num2 > num3) {
+      return num2;
+    } else if (num3 > num1 && num3 > num2) {
+      return num3;
+    } else {
+      return "two highest number or all three numbers are equal"
+    }
+  }
+
+//   Write a function that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
+
+function isVowel(i) {
+    if (i === "a" || i === "e" || i === "i" || i === "o" || i ==="u") {
+      return `${i} is a vowel`
+    } else {
+      return `${i} is not a vowel`
+    }
+  }
   
+  console.log(isVowel("i"));
+  console.log(isVowel("b"));
+
+//   Define a function sumArray and a function multiplyArray that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sumArray([1,2,3,4]) should return 10, and multiplyArray([1,2,3,4]) should return 24.
+
+function sumArray(arr) {
+    var sum = 0;
+      for (i = 0; i < arr.length; i++) {
+        sum += arr[i]; 
+      }
+    return sum;
+  }
+
+  console.log(sumArray([1,2,3,4]));
+
+  function multiplyArray(arr){
+    var product = 1;
+      for (i = 0; i < arr.length; i++) {
+        product *= arr[i]; 
+      }
+      return product;
+  }
+  
+  console.log(multiplyArray([1,2,3,4]));
+
+//   Define a function reverseString that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
+
+function reverseString(str) {
+    var reverseString = "";
+    for (i = str.length -1; i>=0; i--) {
+      reverseString += str[i];
+    }
+    return reverseString;
+  }
+  
+  console.log(reverseString("jag testar"));
+
+//   Write a function findLongestWord that takes an array of words and returns the length of the longest one.
+
+function findLongestWord(arr) {
+    var tempWordLength = 0;
+    var longestWord;
+    for (i=0; i < arr.length; i++) {
+      if(arr[i].length > tempWordLength) {
+        var tempWordLength = arr[i].length;
+        longestWord = arr[i];
+      }
+    }
+    return longestWord;
+  }
+
+  console.log(findLongestWord(["fox", "eagle", "elephant"]));
+
+// Write a function filterLongWords that takes an array of words and an number i and returns the array of words that are longer than i.
+
+function filterLongWords(arr,num) {
+    let longWords = [];
+    for (i=0; i < arr.length; i++) {
+        if (num < arr[i].length) {
+            longWords.push(arr[i]);
+        }
+    }
+    return longWords;
+}
+
+console.log(filterLongWords(["cat","bird","tiger","panda"],4));
