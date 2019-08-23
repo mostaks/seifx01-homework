@@ -17,6 +17,14 @@ function addAccount(ownerName,balance) {
   }
 }
 
+function checkBalance(ownerName) {
+  for (i=0; i<bank.length; i++) {
+    if (ownerName === bank[i].ownerName) {
+      console.log(`${ownerName}, your account have a balance of $ ${bank[i].balance}.\n`);
+    }
+  }
+}
+
 function depositMoney(ownerName, balance) {
   for (i=0; i<bank.length ; i++) {
     if (ownerName === bank[i].ownerName) {
@@ -60,10 +68,11 @@ addAccount('Pitt',100);
 addAccount('Pat',200);
 addAccount('Tintin',3000);
 
+checkBalance('Pitt');
+
 depositMoney('Pat',300);
 withdrawMoney('Pitt',200);
 withdrawMoney('Pitt',20);
 transferMoney('Tintin','Pitt',4000);
 transferMoney('Tintin','Pitt',2000);
-
 console.log(bank);
