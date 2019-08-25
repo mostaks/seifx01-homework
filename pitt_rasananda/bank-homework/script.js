@@ -4,6 +4,7 @@ let accounts = {
   balance: 0
 };
 
+
 function addAccount(ownerName,balance) {
   if (balance >= 0) {
     let accounts = new Object();
