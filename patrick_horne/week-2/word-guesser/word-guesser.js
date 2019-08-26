@@ -30,7 +30,7 @@
 let answer = 'fox';
 let guesses = [];
 let reward = 0;
-let guessesStateTracker = [];
+let guessesStateTracker = []; // Shadow array to track correct guesses
 let hangmanState = 0;
 
 
