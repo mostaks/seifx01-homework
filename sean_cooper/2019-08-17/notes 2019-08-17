@@ -1,0 +1,262 @@
+	notes 2019-08-17
+
+
+	notes 2019-08-17
+
+
+	JS: 
+
+	var canvas = document.getElementById('canvas');
+	var graphics = canvas.getContext('2d');
+
+	var marioWidth = 50;
+	var marioHeight = 50;
+	var marioPositionX = canvas.width / 2;
+	var marioPositionY = canvas.height / 2;
+	var marioMoveSpeed = 5;
+	var marioJumpForce = 20;
+	var maxMarioJumpForce = 20;
+	var marioJumpDecay = 1;
+
+	var luigiWidth = 40;
+	var luigiHeight = 50;
+	var luigiPositionX = canvas.width / 2;
+	var luigiPositionY = canvas.height / 2;
+	var luigiMoveSpeed = 5;
+
+	var gravity = 10;
+
+	var marioTexture = new Image();
+	marioTexture.src = "https://1.bp.blogspot.com/-UNZ6cPAjE-8/WIe5_kSKR8I/AAAAAAAAP0E/M3h7R6-z7NkdQTcLzfdQvX8bGijulJKWQCLcB/s1600/mariojump.png";
+
+	var luigiTexture = new Image();
+	luigiTexture.src = "https://ui-ex.com/images/luigi-transparent-8-bit-1.png";
+
+	function update() {
+
+		// BEGIN UPDATE LOGIC
+		//-------------------------------------
+		if (isKeyDown(LEFT_KEY)) {
+			marioPositionX -= marioMoveSpeed;
+		};
+	  	if (isKeyDown(RIGHT_KEY)) {
+			marioPositionX += marioMoveSpeed;
+		};
+	  	if (isKeyDown(UP_KEY)) {
+			marioPositionY -= marioJumpForce;
+	    marioJumpForce -= marioJumpDecay;
+		};
+	  
+	  //apply gravity so the character falls down
+	  marioPositionY += gravity;
+	  luigiPositionY += gravity;
+
+	  // stop the character from falling down the screen
+	  if( marioPositionY > canvas.height - marioHeight) {
+	      marioPositionY = canvas.height - marioHeight;
+	      marioJumpForce = maxMarioJumpForce;
+	  };
+	    if( luigiPositionY > canvas.height - luigiHeight) {
+	      luigiPositionY = canvas.height - luigiHeight;
+	  };
+
+	  // loop
+	 if( marioPositionX < 0 - marioWidth) {
+	      marioPositionX = canvas.width;
+	  };
+	if( marioPositionX > canvas.width + marioWidth) {
+	      marioPositionX = 0;
+	  };
+
+	  // luigi stalk mario logic
+	  if( marioPositionX > luigiPositionX + luigiWidth) {
+	    luigiPositionX += luigiMoveSpeed;
+	  }
+	    if( marioPositionX + luigiWidth < luigiPositionX) {
+	    luigiPositionX -= luigiMoveSpeed;
+	  }
+		//-------------------------------------
+		// END UPDATE LOGIC
+
+		// BEGIN DRAW LOGIC
+		//-------------------------------------
+
+		graphics.clearRect(0, 0, canvas.width, canvas.height)
+
+		graphics.drawImage(
+			marioTexture,
+			marioPositionX, marioPositionY, marioWidth, marioHeight);
+
+	  graphics.drawImage(
+			luigiTexture,
+			luigiPositionX, luigiPositionY, luigiWidth, luigiHeight);
+		//-------------------------------------
+
+		// ask the browser to call the update function again.
+		requestAnimationFrame(update)
+	}
+
+
+	// DO NOT EDIT BELOW THIS LINE
+	//--------------------------------------------------------------------
+
+	var keys = [];
+	var LEFT_KEY = 37;
+	var UP_KEY = 38;
+	var RIGHT_KEY = 39;
+	var DOWN_KEY = 40;
+
+	// check key down events
+	window.addEventListener('keydown', function (event) {
+		keys[event.keyCode] = true;
+	}, true);
+
+	// check key release events
+	window.addEventListener('keyup', function (event) {
+		keys[event.keyCode] = false;
+	}, true);
+
+	function isKeyDown(key) {
+		return keys[key];
+	}
+
+	update();
+	//--------------------------------------------------------------------
+
+	HTML: 
+	<!DOCTYPE html>
+	<html>
+	  <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width">
+	    <title>repl.it</title>
+	    <link href="style.css" rel="stylesheet" type="text/css" />
+	  </head>
+	  <body>
+	    <canvas id="canvas" width=640 height=480 style="border:1px solid"></canvas>
+	    <script src="script.js"></script>
+	  </body>
+	</html>
+
+Pulling shit from Yianni's github updates (for looking at others acc)
+	git pull upstream master gets 
+
+//loops
+// must give loops an option to exit
+var counter = 0;
+var myCondition = true;
+
+while( myCondition ){
+  counter += 1;
+  console.log(counter);
+
+  if( counter > 5) //adding this gives option for it to be false to get out of loop
+  myCondition = false;
+}
+
+
+
+//loops
+// must give loops an option to exit
+var counter = 0;
+var myCondition = true;
+
+while( true ){
+  counter += 1;
+  console.log(counter);
+
+  if( counter > 5) //adding this gives option for it to be false to get out of loop
+  break;
+}
+
+do while loops are very uncommon
+
+//loops
+// must give loops an option to exit
+var counter = 0;
+var myCondition = true;
+
+do
+{
+  counter += 1;
+  console.log(counter);
+
+  if( counter > 5) //adding this gives option for it to be false to get out of loop
+  break;
+} while( false );
+
+count 10 to 1 (mine)
+var counter = 10;
+var myCondition = true;
+var counterLimit = 0;
+var counterDeviation = 1;
+
+while( myCondition )
+{
+  console.log(counter);
+  counter -= counterDeviation;
+    //adding this gives option for it to be false to get out of loop
+  if( counter <= counterLimit) { 
+  break;
+  }
+};
+
+console.log('end reached')
+
+count 10 to 1 refined
+
+var counter = 10;
+
+while( counter > 0){
+  console.log(counter);
+  counter -= 1;
+}
+
+console.log('end reached')
+
+
+FOR LOOPS
+for(intialiser; condiiton; expression){
+}
+initialiser queried once only
+c
+
+for(var counter = 0; counter < 10; counter + 1){
+  console.log(counter)};
+console.log('end reached');
+
+---
+
+for(var i = 0; j < 5; j++) {
+  for(var j = 0; j < 5 ; j++) {
+  console.log(i * j);
+  }
+}
+
+EXERCISE: FizzBuzz
+/* hey all, useing what you've learned with loops, try to make the following program.
+Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz" */
+
+var maxNumber = 100;
+var minNumber = 1;
+var textField1 = ""
+var textField2 = ""
+
+for(minNumber; minNumber<maxNumber; minNumber = minNumber + 1){
+  if(Number.isInteger(minNumber/3)) {
+    textField1 = 'fizz';
+  };
+
+  if(Number.isInteger(minNumber/5)) {
+    textField2 = 'fizzbuzz';
+  };
+
+  console.log(minNumber + ':' + textField1 + textField2);
+
+  textField1 = "";
+  textField2 = "";
+
+  if(minNumber > maxNumber) {
+    break;
+  };
+}
