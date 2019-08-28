@@ -1,0 +1,90 @@
+Notes 2019-08-27
+
+
+arguments()
+	see what the user has inputed into function
+
+throw()
+	breaks out and returns error
+
+throw new Error();
+	is return but shows as an error instead in console
+
+
+HTML & CSS
+
+<html lang="en">
+<head>
+  
+  </head>
+  
+<body>
+  <h1> lets goooo </h1>
+  <img src="https://st2.depositphotos.com/3647713/12040/i/950/depositphotos_120407626-stock-photo-chicken-nuggets-isolated-on-white.jpg" >
+  <h2> nugget </h2>
+  <nav>
+   <h2> sauce time </h2>
+    <ul>
+      <li><a href = "google.com">sweet&sour sauce</a></li>
+      <li><a href = "google.com">bbq sauce</a></li>
+    </ul>
+  </nav>
+</body>
+ <main>
+   <h2> engly </h2>
+  <h3> some article </h3>
+  <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+  
+    <h3> some article </h3>
+  <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+  
+    <h3> some article </h3>
+  <p>
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  </p>
+  </main>
+  
+ <footer>
+     <nav>
+    <ol>
+      <li><a href = "google.com">sweet&sour sauce</a></li>
+      <li><a href = "google.com">bbq sauce</a></li>
+    </ol>
+  </nav>
+  </footer>
+</html>
+
+CSS >>
+
+body {
+  background-color: gray;
+}
+
+main {
+  width: 75%;
+  text-align: center; 
+  background-color: white;
+}
+
+body img {
+  width: 75%;
+  margin-left: 10%;
+  margin-right: auto;
+}
+
+main p {
+  text-align: left;
+  font-family: fantasy;
+}
+
+main h2, h3 {
+  font-family: sans-serif;
+}
+
+nav h2 {
+  text-align: center;
+}
