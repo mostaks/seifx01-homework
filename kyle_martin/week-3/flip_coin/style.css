@@ -1,0 +1,86 @@
+body {
+    background-color: #ECEFF1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 100px auto 16px;
+    padding: 20px;
+    box-shadow: 1px 2px 4px rgb(199, 199, 199);
+    border-radius: 5px; 
+    
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ff761b;
+    text-align: center;
+}
+.row p {
+    font-size: 100px;
+    font-weight: 900;
+    margin: 0 auto;
+}
+.row { 
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.col-left-and-right {
+    -webkit-box-flex: 0;
+    flex: 0 0 25%;
+    max-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-middle {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+#flipButton {
+    display: block;
+    background: #ff761b;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 22px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+}
+
+img {
+    max-width: 50px;
+}
+
+button:hover {
+    background: #fc6500;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.list li {
+    padding: 15px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.headsBox {
+    border: solid 1px #ccc; 
+}
+
+.tailsBox {
+    border: solid 1px #ccc; 
+    border-radius: 0 0 5px 5px;
+    border-top: none;
+}

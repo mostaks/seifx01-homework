@@ -1,0 +1,151 @@
+
+  html,
+  body,
+  .view {
+  height: 100%;
+}
+
+@media (max-width: 740px) {
+  html,
+  body,
+  .view {
+    height: 1000px;
+  }
+}
+@media (min-width: 800px) and (max-width: 850px) {
+  html,
+  body,
+  .view {
+    height: 600px;
+  }
+}
+html {
+    background: url("https://image.freepik.com/free-vector/light-blue-background-with-white-circular-halftone-pattern_1017-15332.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    height: 100px;
+}
+
+@media (max-width: 740px) {
+    header,
+    .view {
+      height: 1000px;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    header,
+    .view {
+      height: 600px;
+    }
+  }
+
+nav {
+    font-size: 20px;
+    text-align: center;
+}
+ul#horizontal-list {
+    list-style-type: none;
+    padding: 100px 100px 10px 100px;
+}
+
+ul#horizontal-list li {
+    display: inline; 
+}
+
+
+h2 {
+    font-size: 100px;
+    color: whitesmoke;
+}
+
+input {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+div {
+    text-align: center;
+}
+
+.btn button{
+    background-color: transparent;
+    border: 5px solid rgba(13, 95, 13, 0.568); 
+    color: black; 
+    padding: 10px 100px 10px 100px;
+    cursor: pointer; /* Pointer/hand icon */
+    float: none;
+    font-size: 20px;
+    border-radius: 12px;
+  }
+  
+  /* Clear floats (clearfix hack) */
+.btn button:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Add a background color on hover */
+.btn button:hover {
+    background-color: #3e8e41;
+    color: white;
+  }
+
+  footer {
+      background-color: rgba(rgba(156, 201, 209, 0.226), green, blue, alpha);
+      padding: 100px 0px 25px 0px;
+  }
+
+  /*Login page*/
+.myForm {
+    height:100px;
+    font-size:12pt;
+    padding: auto;
+    margin: auto;
+  }
+  /*accounts details page*/
+table {
+  width: 50%;
+  align-self: auto;  
+  background-color: aqua;
+  border: 1px solid gray;
+  margin-left: auto;
+  margin-right: auto;
+}
+.myAccounts {
+text-align: center;
+}
+
+
+.group-btn button{
+    background-color: rgba(86, 241, 241, 0.438);
+    border: 1px solid rgba(13, 95, 13, 0.568); 
+    color: black; 
+    padding: 10px 20px 10px 20px;
+    margin-top: 50px;
+    cursor: pointer; /* Pointer/hand icon */
+    float: none;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  
+  /* Clear floats (clearfix hack) */
+.group-btn button:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Add a background color on hover */
+.group-btn button:hover {
+    background-color: #3e8e41;
+    color: white;
+
+  }
+
+  /*Move money page*/
+
