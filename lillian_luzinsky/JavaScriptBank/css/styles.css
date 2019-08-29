@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    background-color:#E0FCF0;
+    background-size: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main{
+    background-image: url('../images/piggybank.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    background-color:#45B5A8;
+    height: 15vh;
+    opacity: 0.75;
+    position: relative;
+}
+
+
+#logo{
+    color: white;
+    font-weight: 400;
+    font-size: 7vh;
+    margin-top: 20px;
+    float: left;
+    margin-left: 25px;
+    outline: white solid 3px;
+    padding: 5px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    font-weight: 600;
+    margin: 40px;
+    float: right;
+}
+
+a:hover{
+    color: #308076;
+}
+
+button{
+    display: block;
+    height: 7vh;
+    width: 28vh;
+    font-size: 4vh;
+    font-weight: 300;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    outline: #308076 solid 3px;
+    margin-left: 22px;
+    margin-top: 30px;
+}
+
+button:hover {
+	animation: bounce 1s;
+}
+
+#login{
+    background-color:#45B5A8;
+    color: white;
+}
+
+.bank-options{
+    color: #308076;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
