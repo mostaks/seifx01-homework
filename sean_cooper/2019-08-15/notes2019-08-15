@@ -1,0 +1,130 @@
+node = backend js
+
+JAVASCRIPT NOTES
+
+//var city = 'Sydney';
+
+//use let only if u think the variable will change/get overwritten
+let city = 'Sydney'; 
+
+//use const if no change - immutable data
+//favour const over let??
+const firstName = 'Sean';
+
+
+string = set of characters that are enclosed with single quotes or double quotes or backticks
+- single quote recommended\
+
+console.log()
+- prints stuff out inc variables
+
+numbers = dont need to parse numbers due to text vs values
+
+Boolean = true or fales (primitive data)
+- true and false are reserved words, they dont need to be parsed
+
+Undefined = this variable has not been initialised
+- most languages dont have this (makes laggy)
+
+Null = similar to undefined 
+- has not been answered
+
+maintainance tips
+- dont let variables be a b c d e
+- people dont like 
+- always make effort to make name for variable
+- do not use reserved words
+- use camelCase or snake_case only
+
+concatenate: let = "text1" + "text2"
+
+EXERCISE: Fortune teller 
+myway:
+let number_of_children = 100;
+
+let partners_name = 'Anon';
+
+let geographic_location = 'USA';
+
+let job_title = 'shoeguy';
+
+//Concatenation is aids
+const fortune_scam = "you will be a " + job_title + " in " + geographic_location + ", and married to " + partners_name + " with " + number_of_children + " kids.";
+
+//String interpolation is better
+const fortune_scam_v2 = `You will be a ${job_title} in ${geographic_location} and married to ${partners_name} with ${number_of_children} kids.`;
+
+console.log(fortune_scam_v2);
+
+Arithmetic operation
+- can use + - * /
+- shits the same as RL and excel: * / goes first over + -
+
+split ur parenthesis shit
+eg:
+const price = 21 + 3;
+const cookies_wanted = 7
+const total = price / cookies_wanted
+
+
+EXERCISE: The age calculator
+
+let current_year = 2019;
+const birth_year = 1990;
+
+const possible_age = current_year - birth_year;
+const their_age = `They are either ${possible_age - 1} or ${possible_age}.`;
+
+console.log(their_age);
+
+EXERCISE: the lifetime supply calculator
+
+let current_age = 22;
+const max_age = 40;
+const snack_required_per_day = 20;
+
+const rem_living_years = max_age - current_age;
+
+const snack_till_death = `You will need roughly ${rem_living_years * snack_required_per_day * 365} units of snack to last until the ripe old age of ${max_age}.`
+
+console.log(snack_till_death);
+
+(should have 365 as a const days_in_year so can maintain AKA NO MAGIC NUMBERS)
+
+JS is (for now) a loosely typed language
+
+COMMENTS:
+/* multi line content */
+// single line content
+- if u have to do a comment - you most likely can make the var name better
+- dont do comments as much since people may change ur code
+
+
+FUNCTIONS: 
+
+EXERCISE: calculating circles
+let circleR = 4;
+
+//can also use Math.PI
+let piValue = 3.141592;
+
+/*Circumference of Circle = PI x diameter = 2 PI x radius
+    where PI = PI = 3.141592...
+    */
+const calculateCircumference = function (radius) {
+  let result = radius * 2 * piValue;
+  return result;
+};
+
+/* Area of Circle:
+    area = PI r2
+    */
+
+const calculateArea = function (radius) {
+  let result = radius * radius * piValue;
+  return result;
+};
+
+const result = `The circumference is ${calculateCircumference(circleR)} and The area is ${calculateArea(circleR)}.`;
+
+console.log(result);

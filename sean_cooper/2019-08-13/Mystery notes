@@ -1,0 +1,127 @@
+Mystery notes
+
+192-168-1-107:mystery a00$ cat crimescene | grep CLUE
+CLUE: Footage from an ATM security camera is blurry but shows that the perpetrator is a tall male, at least 6'.
+CLUE: Found a wallet believed to belong to the killer: no ID, just loose change, and membership cards for AAA, Delta SkyMiles, the local library, and the Museum of Bash History. The cards are totally untraceable and have no name, for some reason.
+CLUE: Questioned the barista at the local coffee shop. He said a woman left right before they heard the shots. The name on her latte was Annabel, she had blond spiky hair and a New Zealand accent.
+
+find annabel?
+
+192-168-1-107:mystery a00$ cat people | grep Annabel
+Annabel Sun	F	26	Hart Place, line 40
+Oluwasegun Annabel	M	37	Mattapan Street, line 173
+Annabel Church	F	38	Buckingham Place, line 179
+Annabel Fuglsang	M	40	Haley Street, line 176
+
+2 female results
+
+192-168-1-107:mystery a00$ head -n 179 streets/buckingham_place | tail -n 1
+SEE INTERVIEW #699607
+
+192-168-1-107:mystery a00$ head -n 40 streets/hart_place | tail -n 1
+SEE INTERVIEW #47246024
+
+192-168-1-107:interviews a00$ cat interview-699607
+Interviewed Ms. Church at 2:04 pm.  Witness stated that she did not see anyone she could identify as the shooter, that she ran away as soon as the shots were fired.
+
+However, she reports seeing the car that fled the scene.  Describes it as a blue Honda, with a license plate that starts with "L337" and ends with "9"
+
+192-168-1-107:interviews a00$ cat interview-47246024
+Ms. Sun has brown hair and is not from New Zealand.  Not the witness from the cafe.
+
+its this b Annabel Church	F	38	Buckingham Place, line 179
+
+find blue honda starting w L337 and end 9
+
+192-168-1-107:mystery a00$ cat vehicles | grep L337
+License Plate L337ZR9
+License Plate L337P89
+License Plate L337GX9
+License Plate L337QE9
+License Plate L337GB9
+License Plate L337OI9
+License Plate L337X19
+License Plate L337539
+License Plate L3373U9
+License Plate L337369
+License Plate L337DV9
+License Plate L3375A9
+License Plate L337WR9
+
+192-168-1-107:mystery a00$ cat vehicles | grep -A 5 L337
+
+License Plate L337QE9
+Make: Honda
+Color: Blue
+Owner: Erika Owens
+Height: 6'5"
+Weight: 220 lbs
+--
+License Plate L337539
+Make: Honda
+Color: Blue
+Owner: Aron Pilhofer
+Height: 5'3"
+Weight: 198 lbs
+--
+License Plate L337369
+Make: Honda
+Color: Blue
+Owner: Heather Billings
+Height: 5'2"
+Weight: 244 lbs
+--
+License Plate L337DV9
+Make: Honda
+Color: Blue
+Owner: Joe Germuska
+Height: 6'2"
+Weight: 164 lbs
+--
+License Plate L3375A9
+Make: Honda
+Color: Blue
+Owner: Jeremy Bowers
+Height: 6'1"
+Weight: 204 lbs
+--
+License Plate L337WR9
+Make: Honda
+Color: Blue
+Owner: Jacqui Maher
+Height: 6'2"
+Weight: 130 lbs
+
+removed non honda blues
+
+test vs
+membership cards for AAA, Delta SkyMiles, the local library, and the Museum of Bash History
+
+Erika Owens
+192-168-1-107:memberships a00$ cat AAA Delta_SkyMiles Terminal_City_Library Museum_of_Bash_history | grep "erika owens" | wc -l
+       0
+
+Aron Pilhofer
+192-168-1-107:memberships a00$ cat AAA Delta_SkyMiles Terminal_City_Library Museum_of_Bash_history | grep "aron pilhofer" | wc -l
+       3
+
+Heather Billings
+192-168-1-107:memberships a00$ cat AAA Delta_SkyMiles Terminal_City_Library Museum_of_Bash_history | grep "heather billings" | wc -l
+       2
+
+Joe Germuska
+192-168-1-107:memberships a00$ cat AAA Delta_SkyMiles Terminal_City_Library Museum_of_Bash_history | grep "joe germuska" | wc -l
+       2
+
+Jeremy Bowers
+192-168-1-107:memberships a00$ cat AAA Delta_SkyMiles Terminal_City_Library Museum_of_Bash_history | grep "jeremy bowers" | wc -l
+       4
+
+Jacqui Maher
+192-168-1-107:memberships a00$ cat AAA Delta_SkyMiles Terminal_City_Library Museum_of_Bash_history | grep "Jacqui Maher" | wc -l
+       4
+
+192-168-1-107:clmystery-master a00$ echo "Jeremy Bowers" | $(command -v md5 || command -v md5sum) | grep -qif /dev/stdin encoded && echo CORRECT\! GREAT WORK, GUMSHOE. || echo SORRY, TRY AGAIN.
+CORRECT! GREAT WORK, GUMSHOE.
+
+

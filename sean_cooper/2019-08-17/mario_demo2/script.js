@@ -130,6 +130,18 @@ function update() {
 		);
 	};
 
+	/*
+	Alternate solution
+	//for(initialiser; condisition; expression)
+	
+	for(var i=0; i < lives; i++) {
+		graphics.drawImage(
+			mariotexture, i * 10, 0, marioWidth, marioHeight
+		);
+	}
+
+	*/
+
 	//-------------------------------------
 
 	// ask the browser to call the update function again.
