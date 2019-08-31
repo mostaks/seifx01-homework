@@ -85,3 +85,27 @@ let wordList = {
   }
   
   console.log(anagramDetector('listen')); 
+
+
+//   Ridwan's solution
+
+let x = "listen";
+let y = ["enlists", "google", "inlets", "banana"];
+
+
+
+let p  = x.split("");
+let ltr = p.sort();
+ltr = ltr.join("");
+
+
+for (elm in y) {
+    let elmt = y[elm].split("");
+    elmt = elmt.sort();
+    elmt = elmt.join("");
+    if (ltr === elmt) {
+        console.log(` the anagram is ${y[elm]}`);
+    }
+
+
+}
