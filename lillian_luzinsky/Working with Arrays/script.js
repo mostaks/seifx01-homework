@@ -16,6 +16,9 @@ console.log('------------');
 
 // I know this is not the correct way to add rainbowColors values into twoColors
 let twoColors = [];
+for (let index = 0; index < rainbowColors.length; index++) {
+    twoColors.push(rainbowColors[index]);
+}
 twoColors.push(rainbowColors[0], rainbowColors[1], rainbowColors[2], rainbowColors[3], rainbowColors[4], rainbowColors[5], rainbowColors[6]);
 console.log(twoColors);
 
