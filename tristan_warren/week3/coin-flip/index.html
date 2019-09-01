@@ -10,12 +10,51 @@
 </head>
 
 <body>
-    <div>
-        <p>s</p>
-        <div>rff
+    <div id="mainBox">
+        <h1>Coin Flip</h1>
+        <p><span id="left" onclick="changeNum('left')"><</span>      <span id="num">3</span>     <span onclick="changeNum('right')" id="right">></span></p>
+        <div id="resultBoxs">
+            <div onclick="updateFlip()" class="rectangles">
+                <h3>FLIP</h3>
+            </div>
+            <div class="rectangles">
+                <h2>Heads: 0</h2>
+            </div>
+            <div class="rectangles">
+                <h2>Tails: 0</h2>
+            </div>
         </div>
-        <p>></p>
+
+        <div id="resultBox">
+            <table>
+                <thead>
+                    <tr>
+                    <td>Flips</td>
+                    <td>Heads</td>
+                    <td>Tails</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

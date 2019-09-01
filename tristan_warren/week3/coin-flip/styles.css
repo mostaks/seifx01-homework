@@ -1,25 +1,81 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 
-div {
-    margin: 50px auto;
-    height: 400px;
-    width: 400px;
-    border: 1px black solid;
-    border-radius: 3px;
-
+body {
+	background-color: grey;
 }
 
-div div {
-    margin: 100px 10px 0;
-    padding: 10px;
-    display: inline;
+#mainBox {
+	margin: 50px auto;
+	/* height: 500px; */
+	width: 400px;
+	border: 1px black solid;
+	border-radius: 3px;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+
+#resultBoxs {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	width: 300px;
+	align-self: center;
+	margin: 30px auto;
+}
+
+.rectangles {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	border: 2px black solid;
+	height: 70px;
+	box-sizing: border-box;
+}
+
+.rectangles:nth-child(1) {
+	background-color: chartreuse;
+	text-align: center;
+}
+
+h1,
+p {
+	margin-top: 20px;
+	text-align: center;
 }
 
 p {
-    text-align: center;
-    display: inline;
+	font-size: 60px;
+}
+
+h1 {
+	color: orange;
+	font-size: 20px;
+}
+
+span {
+	font-size: 80px;
+	text-align: end;
+	font-weight: bold;
+}
+
+h2 {
+	margin-left: 10px;
+}
+
+table {
+	margin: 0 auto;
+	width: 300px;
+}
+
+td {
+	height: 70px;
+	border: 1px black solid;
+	text-align: center;
 }
