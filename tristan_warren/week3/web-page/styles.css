@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+#page {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+#image {
+    background-image: url("https: //images.pexels.com/photos/1308624/pexels-photo-1308624.jpeg?cs=srgb&dl=4k-wallpaper-architecture-background-1308624.jpg&fm=jpg");
+    background-color: rgb(31, 15, 15);
+    height: 100vh;
+    width: 100%;
+    display: block;
+    background-position: center;
+}
+
+#hero-text {
+    background-color: white;
+}
+
+/* img {
+
+    ba
+} */
+
+nav {
+    height: 50px;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 40px;
+}
+
+main {
+    display: flex;
+    background-color: antiquewhite;
+
+}
+
+.card {
+    width: 33%;
+    margin: 10px;
+    background-color: white;
+    display: block;
+}
+
+.card h2 {
+    padding: 20px 10px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.explainer {
+    font-size: 15px;
+    text-align: left;
+    padding: 10px;
+}
+
+.signoff {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 0 20px 10px;
+
+}
