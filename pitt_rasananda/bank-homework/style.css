@@ -1,7 +1,10 @@
 html {
-    background-color: #EDEDED;
-    font-family: 'Roboto', sans-serif;
+    background-color: #ededed;
     font-size:18px;
+}
+
+body {
+    background-color: #ededed;
 }
 
 .card{
@@ -35,40 +38,13 @@ a {
     text-align: center;
 }
 
-.header{
-    color: #333;
-    font-weight: bold;
-    border-top: 2px solid #D8D8D8;
-    border-bottom:2px solid #D8D8D8;
-}
 
 .clearfix {
     clear: both;
     overflow: auto;
-  }
-
-.table-wrapper {
-    margin: 15px;
-  }
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-.first {
-    padding-top: 20px;
-}
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
 }
 
+/* 
 input {
     height: 42px;
     width: 400px;
@@ -77,8 +53,8 @@ input {
     font-size: 16px;
     padding: 0 16px;
     margin-bottom : 20px;
-}
-label {
+} */
+/* label {
     font-size: 16px;
     display: block;
     padding: 0 0 8px 0;
@@ -96,8 +72,8 @@ label {
 
 .button:hover{
     color: #000;
-}
-.modal {
+} */
+/* .modal {
     position: fixed;
     z-index: 1;
     background-color: rgba(0,0,0,0.3);
@@ -116,4 +92,9 @@ label {
     padding: 20px;
     width: 440px;
     border-radius: 4px;
+} */
+
+button.action-dropdown {
+    background: none;
+    border: none;
 }

@@ -4,46 +4,174 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Bank</title>
-    <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    <!-- <link href="node_modules/bulma/css/bulma.css" rel="stylesheet" type="text/css" /> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9cf22825c3.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
 
   </head>
   <body>
     <div class="container">
         <div class="card">
-            <a id="new-account-btn" class="right button"><ion-icon name="add"></ion-icon> new account</a>
-            <h2 class="center-align clearfix">BANK</h2>
-            <div class='table-wrapper'>
-                <div class='row header'>
-                    <div class='column'>
-                        <span>Account Name</span>
-                    </div>
-                    <div class='column'>
-                        <span>Balance</span>
-                    </div>
-                </div>
-                <div id ="account-list">
+            <button type="button" class="btn btn-light right" id="new-account-btn" data-toggle="modal" data-target="#newAccountModal"><i class="fas fa-plus"></i>    new account</button>
+            <h1 class="center-align clearfix">BANK</h1><br/>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Account Name</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col"></th>
+                    </tr>
+                <thead>
+                <tbody id ="account-list">
                     <!-- list of accounts goes here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+<!-- begin new account modal -->
+    <div class="modal" id="newAccountModal" tabindex="-1" role="dialog" aria-labelledby="newAccountModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="newAccountModalLabel">New Account</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
+                <div class="modal-body">
+                    <form id="new-account-form"> 
+                        <div class="form-group">
+                            <label for="account-name">Account Name</label>
+                            <input type="text" class="form-control" id="account-name" placeholder="Enter Account name">
+                        </div>
+                        <div class="form-group">
+                            <label for="deposit">Initial Deposit</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">$</div>
+                                </div>
+                                <input type="number" class="form-control" id="initial-deposit" placeholder="Amount you'd like to deposit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" id="create-account" data-dismiss="modal">New Account</button>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>      
+                </div>
+              </div>
             </div>
-        </div>
-    </div>
-    <div id="new-account-modal" class="modal">
-        <div class="modal-content">
-            <h2>New Account</h2>
-            <form id="new-account-form">
-            <label for ="account-name">Account Name</label>
-            <input type="text" id="account-name"/>
-            <label for ="initial-deposit">Initial Deposit</label>
-            <input type="number" id="initial-deposit"/>
-            <div class="row right-align">
-                <div id="create-account" class="button">Create</div> <div name="close" class="button">Cancel</div>
+          </div>
+<!-- end new account modal -->
+
+<!-- begin deposit modal -->
+    <div class="modal" id="depositModal" tabindex="-1" role="dialog" aria-labelledby="depositModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="depositModalLabel">Deposit Money</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form id="deposit-form">
+                        <div class="form-group">
+                            <label for="deposit-amount">Amount</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">$</div>
+                                </div>
+                                <input type="number" class="form-control" id="deposit-amount" placeholder="Amount you'd like to deposit">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" id="deposit-money" data-dismiss="modal">Deposit</button>
+                    <button type="button" class="btn" data-dismiss="modal">Close</button>      
+                </div>
+              </div>
             </div>
-            </form>
+          </div>
+ <!-- end deposit modal -->
+
+ <!-- begin withdraw modal -->
+ <div class="modal" id="withdrawModal" tabindex="-1" role="dialog" aria-labelledby="withdrawModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="withdrawModalLabel">Withdraw Money</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="withdraw-amount">Amount</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">$</div>
+                            </div>
+                            <input type="number" class="form-control" id="withdraw-amount" placeholder="Amount you'd like to withdraw">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" id="withdraw-money" data-dismiss="modal">Withdraw</button>
+                <button type="button" class="btn" data-dismiss="modal">Close</button>      
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+<!-- end withdraw modal -->
+
+<!-- begin transfer modal -->
+<div class="modal" id="transferModal" tabindex="-1" role="dialog" aria-labelledby="transferModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="transferModalLabel">Transfer Money</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="account-name">Transfer to</label>
+                        <select class ="form-control" id="transfer-to">
+                            <option>Select account name</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="transfer-amount">Amount</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">$</div>
+                            </div>
+                            <input type="number" class="form-control" id="transfer-amount" placeholder="Amount you'd like to transfer">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" id="transfer-money" data-dismiss="modal">Transfer</button>
+                <button type="button" class="btn" data-dismiss="modal">Close</button>      
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- end transfer modal -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="bank-v2.js"></script>
   </body>
 </html>

@@ -30,10 +30,21 @@ let bank = {
       let listOfAccounts = document.getElementById("account-list");
       listOfAccounts.innerHTML ='';
       this.accounts.forEach(function(account){
-        let accountRow = document.createElement('div');
-        accountRow.className = 'row';
-        accountRow.innerHTML =`<div class="column"><span>${account.name}</span></div><div class="column"><span>$ ${account.balance}</span></div><ion-icon name="more" class="right"></ion-icon>
-        </span>`
+        let accountRow = document.createElement('tr');
+        accountRow.innerHTML =`
+            <td class="account-name">${account.name}</td>
+            <td>$ ${account.balance}</td>
+            <td>
+          <div class="dropdown">
+            <button class="action-dropdown right" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+              <a id="deposit-${account.name}" class="dropdown-item" data-toggle="modal" data-target="#depositModal">Deposit</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#withdrawModal">Withdraw</a>
+              <a class="dropdown-item" data-toggle="modal" data-target="#transferModal">Transfer</a>
+            </div>
+            </td>`
         listOfAccounts.appendChild(accountRow);
         console.log(account.name + `\t\t$` + account.balance);
       });
@@ -46,35 +57,34 @@ let bank = {
   document.getElementById('create-account').addEventListener('click', function() {
     let accountName = document.getElementById('account-name').value;
     let initialBalance = document.getElementById('initial-deposit').value;
+    let initialBalanceInt = parseInt(initialBalance)
     let form = document.getElementById('new-account-form');
     if (!accountName) {
       
     } else {
-      bank.addAccount(accountName, initialBalance);
+      bank.addAccount(accountName, initialBalanceInt);
       console.log(bank);
       bank.displayAllAccounts();
-      newAccountModal.style.display = "none";
       form.reset();
     }
   });
-  
-  let newAccountModal = document.getElementById("new-account-modal");
-  let newAccountBtn = document.getElementById("new-account-btn");
-  let cancelBtn = document.getElementsByName("cancel-btn");
 
-  cancelBtn.onclick = function() {
-    newAccountModal.style.display = "none";
-  }
+  document.getElementById('deposit-money').addEventListener('click', function() {
+    let depositAmount = document.getElementById('deposit-amount').value;
+    let form = document.getElementById('deposit-form');
+    // let accountOwner = document.querySelector(".account-name");
+    let accountOwner = 'Pitt';
+    if (!depositAmount) {
 
-  newAccountBtn.onclick = function() {
-    newAccountModal.style.display = "block";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == newAccountModal) {
-      newAccountModal.style.display = "none";
+    } else {
+      accountOwner.deposit(depositAmount);
+      bank.displayAllAccounts();
+      form.reset();
     }
-  }
+  });
+
+
+  
 
   let pitt = bank.addAccount('Pitt',100);
   pitt.deposit(200);
