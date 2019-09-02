@@ -1,3 +1,16 @@
+let selectedAccount;
+let emptyState = document.getElementById('empty-state');
+
+function checkEmptyState() {
+  if(bank.accounts.length === 0 ) {    
+    document.getElementById('table').style.display = "none";
+    emptyState.style.display = "block";
+  } else if (bank.accounts.length >= 1) {
+    emptyState.style.display = "none";
+    document.getElementById('table').style.display = "table";
+  }
+}
+
 let bank = {
     accounts: [],
     addAccount: function(accountName, initialBalance) {
@@ -29,6 +42,8 @@ let bank = {
       console.log(`Name\t\tBalance`);
       let listOfAccounts = document.getElementById("account-list");
       listOfAccounts.innerHTML ='';
+      let listOfAccountsOptions = document.getElementById("transfer-to");
+      listOfAccountsOptions.innerHTML ='';
       this.accounts.forEach(function(account){
         let accountRow = document.createElement('tr');
         accountRow.innerHTML =`
@@ -45,7 +60,18 @@ let bank = {
               <a class="dropdown-item" data-toggle="modal" data-target="#transferModal">Transfer</a>
             </div>
             </td>`
+        
+        accountRow.addEventListener('click', function() {
+          selectedAccount = this.rowIndex-1;
+        });
+
         listOfAccounts.appendChild(accountRow);
+
+        let option = document.createElement('option');
+        option.text = `${account.name}`;
+        option.value = `${account.name}`;
+        listOfAccountsOptions.appendChild(option);
+
         console.log(account.name + `\t\t$` + account.balance);
       });
     },
@@ -64,6 +90,7 @@ let bank = {
     } else {
       bank.addAccount(accountName, initialBalanceInt);
       console.log(bank);
+      checkEmptyState();
       bank.displayAllAccounts();
       form.reset();
     }
@@ -71,28 +98,53 @@ let bank = {
 
   document.getElementById('deposit-money').addEventListener('click', function() {
     let depositAmount = document.getElementById('deposit-amount').value;
+    let depositAmountInt = parseInt(depositAmount);
     let form = document.getElementById('deposit-form');
-    // let accountOwner = document.querySelector(".account-name");
-    let accountOwner = 'Pitt';
+    let accountOwner = bank.accounts[selectedAccount];
     if (!depositAmount) {
-
     } else {
-      accountOwner.deposit(depositAmount);
+      accountOwner.deposit(depositAmountInt);
       bank.displayAllAccounts();
       form.reset();
     }
   });
 
+  document.getElementById('withdraw-money').addEventListener('click', function() {
+    let withdrawAmount = document.getElementById('withdraw-amount').value;
+    let withdrawAmountInt = parseInt(withdrawAmount);
+    let form = document.getElementById('withdraw-form');
+    let accountOwner = bank.accounts[selectedAccount];
+    if (!withdrawAmount) {
 
-  
+    } else {
+      accountOwner.withdraw(withdrawAmountInt);
+      bank.displayAllAccounts();
+      form.reset();
+    }
+  });
 
-  let pitt = bank.addAccount('Pitt',100);
-  pitt.deposit(200);
-  let pat = bank.addAccount('Pat', 200);
-  let tintin = bank.addAccount('Tintin', 1000);
-  pitt.transferTo(tintin,200);
-  bank.transfer(tintin,pat,200);
-  tintin.withdraw(500);
+  document.getElementById('transfer-money').addEventListener('click', function() {
+    let transferAmount = document.getElementById('transfer-amount').value;
+    let transferAmountInt = parseInt(transferAmount);
+    let form = document.getElementById('transfer-form');
+    let accountOwner = bank.accounts[selectedAccount];
+    let accountOption = document.getElementById('transfer-to');
+    let anotherAccount = accountOption.value;
+
+    for(i = 0; i < bank.accounts.length; i++) {
+      if (anotherAccount === bank.accounts[i].name)
+      anotherAccount = bank.accounts[i];
+    }
+    if (!transferAmount) {
+
+    } else {
+      accountOwner.transferTo(anotherAccount ,transferAmountInt);
+      bank.displayAllAccounts();
+      form.reset();
+    }
+  });
+
   console.log(`Total: $` + bank.getTotal());
+  checkEmptyState();
   bank.displayAllAccounts();
   

@@ -12,10 +12,13 @@
   </head>
   <body>
     <div class="container">
-        <div class="card">
+        <div id="main-pane" class="card">
             <button type="button" class="btn btn-light right" id="new-account-btn" data-toggle="modal" data-target="#newAccountModal"><i class="fas fa-plus"></i>    new account</button>
             <h1 class="center-align clearfix">BANK</h1><br/>
-            <table class="table">
+            <div id="empty-state">
+                <h2>There is no account to display</h2>
+            </div>
+            <table id="table" class="table">
                 <thead>
                     <tr>
                         <th scope="col">Account Name</th>
@@ -109,7 +112,7 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="withdraw-form">
                     <div class="form-group">
                         <label for="withdraw-amount">Amount</label>
                         <div class="input-group">
@@ -141,7 +144,7 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+                <form id ="transfer-form">
                     <div class="form-group">
                         <label for="account-name">Transfer to</label>
                         <select class ="form-control" id="transfer-to">
