@@ -43,6 +43,10 @@ body {
 
 #hero-text {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 nav {
@@ -68,15 +72,22 @@ p {
     padding: 40px;
 }
 
+.line {
+    height: 2px;
+    width: 90%;
+    background-color: rgb(230, 230, 230);
+    margin-bottom: 10px;
+}
+
 main {
     display: flex;
-    background-color: antiquewhite;
+    background-color: white;
 
 }
 
 .card {
     width: 33%;
-    margin: 10px;
+    margin: 20px;
     background-color: white;
     display: block;
 }
@@ -96,7 +107,7 @@ main {
 }
 
 .signoff {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     text-align: left;
     padding: 0 0 20px 10px;
@@ -113,7 +124,7 @@ main {
     font-size: 10px;
     color: grey;
     text-align: left;
-    padding: 0 0 80px 10px;
+    padding: 0 0 80px 20px;
     font-style: italic;
 
 }
