@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo{
+    background-image: url("https://www.vikingyachts.com/images/models/93M/gallery/3-93-Viking-MY-3-revised-BG-4-WEB.jpg");
+    background-size: cover;
+    height: 600px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+#logo h1{
+    font-weight: 700;
+    font-size: 100px;
+    padding-top: 50px;
+}
+
+#logo h2{
+    font-size: 50px;
+    font-weight: 300;
+}
+
+#navbar{
+    height: 90px;
+    background-color: turquoise;
+    padding-top: 30px;
+    text-align: center;
+}
+
+#navbar a{
+    color: rgb(0, 73, 122);
+    margin: 20px; 
+    font-weight: 600;
+}
+
+a :hover{
+    color: white;
+    text-decoration: none;
+}
