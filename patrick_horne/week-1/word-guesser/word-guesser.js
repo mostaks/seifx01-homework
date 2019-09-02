@@ -28,16 +28,14 @@
  */
 
 let answer = 'fox';
-let guesses = [];
+let correctlyGuessedLetters = [];
 let reward = 0;
-let guessesStateTracker = []; // Shadow array to track correct guesses
 let hangmanState = 0;
 
 
 /** initialise the guesses array with underscores */
 for (let i in answer) {
-  guesses[i] = '_';
-  guessesStateTracker = false;
+  correctlyGuessedLetters[i] = '_';
 }
 
 function guessLetter(guessedLetter) {
@@ -47,21 +45,19 @@ function guessLetter(guessedLetter) {
   
   
   for (let i in answer) {
-    if (guessesStateTracker[i]) { // Do nothing if letter was guessed already.
-      console.log('Already guessed: ', guessedLetter)
-    } else if (guessedLetter === answer[i]) {
-      guesses[i] = guessedLetter;
+    if (guessedLetter === answer[i]) {
+      correctlyGuessedLetters[i] = guessedLetter;
       letterFound = true;
       rewardMultiplier++;
     }
   }
 
-  for (let i in guesses) {
-    if (guesses[i] === '_') {
-      challengeSolved = false;
-    }
+  // challenge isn't solved if there are underscores.
+  if (correctlyGuessedLetters.search(/_/) === -1) {
+    challengeSolved = false;
   }
 
+  
   if (challengeSolved) {
     console.log('Congratulations! You win!');
     console.log(`Your reward: $${Math.round(reward)}`)
