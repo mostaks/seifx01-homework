@@ -11,18 +11,30 @@
     <div class="card">
       <h2>Coin Flip</h2>
       <div class="row">
-        <div class="leftBtn">
+        <div id="leftBtn" class="leftBtn">
           <ion-icon size="large" name="arrow-back"></ion-icon>
         </div>
-        <div class="big-number">5</div>
-        <div class="rightBtn">
+        <div id ="number-of-flip" class="big-number">0</div>
+        <div id="rightBtn" class="rightBtn">
           <ion-icon size="large" name="arrow-forward"></ion-icon>
         </div>
       </div>
-      <div class="flip-button">FLIP</div>
-      <div class="result">Heads: 0</div>
-      <div class="result">Tails: 0</div>
+      <div id="flipBtn" class="flip-button">FLIP</div>
+      <div class="result">Heads: <span id="number-of-head">0</span></div>
+      <div class="result">Tails: <span id="number-of-tail">0</span></div>
       </ul>
+      
+      <div id="showHistoryBtn" class="show-history">Show History</div>
+      <div id ="history-pane" class="table-wrapper">
+        <div class="row header">
+            <div class='column'><span>Coins</span></div>
+            <div class='column'><span>Heads</span></div>
+            <div class='column'><span>Tails</span></div>  
+          </div>
+        <div id ="history-list">
+          
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

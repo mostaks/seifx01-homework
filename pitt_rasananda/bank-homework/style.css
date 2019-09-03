@@ -1,0 +1,56 @@
+html {
+    background-color: #ededed;
+    font-size:18px;
+}
+
+body {
+    background-color: #ededed;
+}
+
+.card{
+    display: block;
+    width: 800px;
+    background: #fff;
+    margin:80px auto;
+    padding: 24px;
+    border-radius: 4px;
+}
+
+a {
+    color: #949494;
+    text-decoration: none;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    display: block;
+    float: right;
+}
+
+.right-align{
+    justify-content: flex-end;
+}
+
+.center-align{
+    text-align: center;
+}
+
+
+.clearfix {
+    clear: both;
+    overflow: auto;
+}
+
+button.action-dropdown {
+    background: none;
+    border: none;
+}
+
+#empty-state{
+    margin: 100px 0;
+    text-align: center;
+    color: #dedede;
+}
