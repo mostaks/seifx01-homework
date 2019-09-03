@@ -1,0 +1,113 @@
+body {
+    margin: 0px 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+a {
+   text-decoration: none; 
+   color: #fff;
+}
+a:hover {
+    color: rgb(255, 123, 0);
+ }
+ a:active {
+    font-weight: 500;
+ }
+
+.main-nav {
+    font-weight: 300; 
+    background-color: #011932;
+    padding: 20px;
+}
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+.main-nav li {
+    margin: 10px;
+    font-size: 14px;
+}
+#hero {
+    background-image: url(/Users/Kyle/seifx01/seifx01-homework/kyle_martin/week-3/mock_website/img/fer-gomez-0R2xt8AJRyE-unsplash.jpg);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #fff;
+  }
+
+  #hero h1 {
+    font-size: 4em;
+    font-weight: 900;
+    margin: 0px;
+    letter-spacing: 5px;
+    line-height: 0.9;
+  }
+
+  #hero p {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+.firstSectionHomePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.firstSectionHomePage p {
+    font-size: 2em;
+    font-weight: 200;
+    padding: 30px 60px;
+    text-align: center;
+    line-height: 2em;
+    color: #011932;
+}
+
+.infoSection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    
+}
+.infoColoum {
+    width: 30%;
+}
+.infoColoum img {
+    width: 100%;
+}
+.infoSection  h2 {
+    font-weight: 300;
+    font-size: 1.4em;
+}
+
+.infoSection p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+.footerSection {
+    background-color: #011932;
+}

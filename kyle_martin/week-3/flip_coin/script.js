@@ -20,10 +20,12 @@ let heads = 0;
 let tails = 0;
 
 const flipCoin = function() {
-    if(Math.random() < 0.50) {
-        heads++;
-    } else {
-        tails++;
+    for(let i = 0; i < coinCount; i++) {
+        if(Math.random() < 0.50) {
+            heads++;
+        } else {
+            tails++;
+        }
     }
     document.getElementById("tails").innerHTML = tails;
     document.getElementById("heads").innerHTML = heads;
@@ -56,3 +58,23 @@ const reset = function() {
     document.getElementById("heads").innerHTML = heads;
 }
 document.getElementById("flipButton").addEventListener("click", reset);
+
+// show or hide reults on button click 
+const showResults = function() {
+    var x = document.getElementById("resultsTable");
+    if(x.style.display === "none"){
+    x.style.display = "initial";
+    } else {
+    x.style.display = "none";
+    }    
+}   
+document.getElementById("showHistory").addEventListener("click", showResults);
+
+const updateTable = function() {
+    
+    let coinAmount = document.getElementsByTagName('tr')[1];
+    console.log(coinAmount.innerHTML);
+
+    
+}
+updateTable();
