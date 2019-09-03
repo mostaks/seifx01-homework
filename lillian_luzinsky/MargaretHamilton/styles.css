@@ -1,0 +1,114 @@
+/*font-family: 'Bubblegum Sans', cursive;*/
+
+/* colors
+dark blue: #263561;
+light blue: #a7c9ff;
+warm yellow: #ffd33a;
+bright orange: #ff8827;
+indigo: #444084;*/
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#home, #bio, #trivia{
+    background-color: #ffd33a;
+    color: white;
+    text-decoration: none;
+    margin-left: 5vh;
+}
+
+#navbar, a{
+    height: 10vh;
+    background-color: #ffd33a;
+    z-index: 20;
+    width: 100vw;    
+    color: white;
+    font-size: 3vh;
+}
+a{
+    margin-left: 1vh;
+}
+
+a:hover{
+    color: #e6812aee;
+    text-decoration: none;
+}
+
+
+h1{
+    color: white;
+    font-size: 7vh;
+    font-family: 'Bubblegum Sans', cursive;
+    padding: 10px;
+    display: inline-block;
+}
+
+.leftside, .rightside {
+	height:100vh;
+    width:100%;
+}
+
+.leftside{
+    background-color: #263561;
+    background-image: url("/images/MargaretHamiltonPortrait.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.rightside{
+    background-color: white;
+    padding-top: 25vh;
+    text-align: center;
+}
+
+h2{
+    font-size: 10vh;
+    line-height: 9vh;
+    margin-right: 2vh;
+    color: #413b96;
+    margin-bottom: 5vh;
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+}
+
+h3{
+    font-size: 5vh;
+    line-height: 8vh;
+    margin: 3vh 15vh 3vh 15vh;
+    color: #7ca5e6;
+    font-family: 'Bubblegum Sans', cursive;
+}
+
+#biolink a{
+    font-size: 3vh;
+    line-height: 3vh;
+    margin-bottom: 2vh;
+    color: #e6812aee;
+    font-family: 'Bubblegum Sans', cursive;
+    background-color: white;
+}
+
+#biolink :hover{
+    color: #ffd33a;
+}
+
+
+/*for tablet portrait
+@media screen and (max-width: 1025px) and (min-width: 668px)
+{
+    body{
+        overflow: visible;
+    }
+	.leftside {
+        background-image: url("./images/MargaretHamiltonStanding.jpeg");
+        background-image: 80vh;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+    
+}
+
+*/

@@ -13,8 +13,9 @@ main{
 }
 
 .navbar{
+    position: static;
     background-color:#45B5A8;
-    height: 15vh;
+    height: 20vh;
     opacity: 0.75;
     position: relative;
 }
@@ -26,9 +27,9 @@ main{
     font-size: 7vh;
     margin-top: 20px;
     float: left;
-    margin-left: 25px;
-    outline: white solid 3px;
-    padding: 5px;
+    border: white solid 3px;
+    padding: 2vh;
+    border-radius: 100px;
 
 }
 
@@ -45,48 +46,33 @@ a:hover{
     color: #308076;
 }
 
-button{
-    display: block;
-    height: 7vh;
-    width: 28vh;
-    font-size: 4vh;
+h2{
+    margin: 100px 0px 50px 25px;
+    color: black;
+    font-size: 5vh;
     font-weight: 300;
-    text-align: center;
-    background-color: transparent;
-    cursor: pointer;
-    overflow: hidden;
-    outline: #308076 solid 3px;
-    margin-left: 22px;
-    margin-top: 30px;
 }
 
-button:hover {
-	animation: bounce 1s;
+.account-management{
+    background-color: #45B5A8;
+    width: 30%;
+    border-radius: 100px;
+    padding: 3vh;
+    margin-bottom: 10px;
 }
 
-#login{
-    background-color:#45B5A8;
+label{
+    font-size: 3vh;
     color: white;
 }
 
-.bank-options{
-    color: #308076;
-    background-color: rgba(255, 255, 255, 0.5); 
+input{
+    margin-left: 40px;
+    height: 4vh;
+    width: 15vw;
+    border-radius: 50px;
 }
 
-@keyframes bounce {
-	0%, 20%, 60%, 100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
-
-	40% {
-		-webkit-transform: translateY(-20px);
-		transform: translateY(-20px);
-	}
-
-	80% {
-		-webkit-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
+button{
+    display: inline-block;
 }
