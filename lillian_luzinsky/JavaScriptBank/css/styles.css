@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    background-color:#E0FCF0;
+    background-size: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main{
+    background-image: url('../images/piggybank.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.navbar{
+    position: static;
+    background-color:#45B5A8;
+    height: 20vh;
+    opacity: 0.75;
+    position: relative;
+}
+
+
+#logo{
+    color: white;
+    font-weight: 400;
+    font-size: 7vh;
+    margin-top: 20px;
+    float: left;
+    border: white solid 3px;
+    padding: 2vh;
+    border-radius: 100px;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 3vh;
+    font-weight: 600;
+    margin: 40px;
+    float: right;
+}
+
+a:hover{
+    color: #308076;
+}
+
+h2{
+    margin: 100px 0px 50px 25px;
+    color: black;
+    font-size: 5vh;
+    font-weight: 300;
+}
+
+.account-management{
+    background-color: #45B5A8;
+    width: 30%;
+    border-radius: 100px;
+    padding: 3vh;
+    margin-bottom: 10px;
+}
+
+label{
+    font-size: 3vh;
+    color: white;
+}
+
+input{
+    margin-left: 40px;
+    height: 4vh;
+    width: 15vw;
+    border-radius: 50px;
+}
+
+button{
+    display: inline-block;
+}

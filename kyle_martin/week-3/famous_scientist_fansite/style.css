@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    margin: 20px;
+}
+a {
+    text-decoration: none;
+    color: #000; 
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu ul {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-end;
+    margin: 10px; 
+    border-bottom: 1px solid #ccc; 
+}
+.menu li {
+    padding: 10px;
+}
+.menu a:hover {
+   color:  rgb(113, 0, 128);
+}
+
+#hero {
+    background-image: url(https://hackaday.com/wp-content/uploads/2018/05/sophiwilson.jpg?w=800);
+    height: 75vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  #hero h1 {
+    font-size: 4em;
+    font-weight: 900;
+    margin: 0px;
+    letter-spacing: 5px;
+    line-height: 0.9;
+  }
+
+.header-title {
+    font-size: 50px;
+    text-align: center;
+    color: rgb(149, 0, 168);
+}
+
+.bio {
+    width: 70%;
+    margin: 0 auto;
+}
+
+  #hero p {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+.firstSectionHomePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+.firstSectionHomePage p {
+    font-size: 2em;
+    font-weight: 200;
+    padding: 30px 60px;
+    text-align: center;
+    line-height: 2em;
+}
+
+.infoSection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    width: 100%;
+    
+}
+.infoColoum {
+    width: 25%;
+}
+.button {
+    text-align: center; 
+    padding: 10px;
+    background-color: rgb(149, 0, 168);
+    color: #fff;
+}
+.button:hover {
+    background-color: rgb(113, 0, 128);
+}
+
+footer {
+    background-color: rgb(113, 0, 128);
+    padding: 50px 20px 10px 20px ;
+    margin: 80px 0 0 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff
+}
+footer i {
+    margin: 0 10px;
+    color: #fff;
+}

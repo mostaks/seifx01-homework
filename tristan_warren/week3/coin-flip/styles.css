@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+div {
+    margin: 50px auto;
+    height: 400px;
+    width: 400px;
+    border: 1px black solid;
+    border-radius: 3px;
+
+}
+
+div div {
+    margin: 100px 10px 0;
+    padding: 10px;
+    display: inline;
+}
+
+p {
+    text-align: center;
+    display: inline;
+}

@@ -1,0 +1,92 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300 !important;
+}
+
+a { color: #000 !important;}
+
+p {
+  color: #666;
+  font-family: 'PT Serif', serif;
+}
+.hero {
+    display: block;
+    position: absolute;
+    margin: 25% auto 0;
+    color: #fff;
+    z-index: 1;
+    width:100%;
+}
+
+.hero h1{
+    color: #fff;
+    font-size: 72px;
+    text-align: center;
+    font-weight: 800 !important;
+}
+
+.hero p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size:18px;
+    letter-spacing: 2.6px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#heroCarousel{
+    max-height: 720px;
+    overflow: hidden;
+}
+
+.navbar .row {
+    margin: 0 auto;
+}
+.hero-text h3 {
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.6;
+    padding-top: 40px;
+}
+
+.article h4 {
+    font-size: 32px;
+    line-height: 36px;
+    padding-bottom: 12px;
+}
+.article p {
+    padding: 20px 0;
+    line-height: 1.8;
+    font-size: 18px;
+    color: #666;
+}
+
+.active a.nav-link {
+    color: #fff !important;
+}
+a.nav-link  {
+    color: #ccc !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+a.nav-link:hover{
+    color:#fff !important;
+}
+
+section {
+    margin: 60px auto;
+}
+
+footer {
+    border-top: 1px solid #ececec;
+}
+
+footer .social-icons{
+    margin: 0 auto;
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+footer .social-icons i {
+    padding: 0 12px;
+}
