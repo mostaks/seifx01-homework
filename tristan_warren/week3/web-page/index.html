@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Website</title>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <h1>VSSL</h1>
             <h2>Super Flexible</h2>
         </div>
-        <nav>
+        <div class="navi">
             <a href="">Home</a>
             <a href="">The Yacht</a>
             <a href="">Our Crew</a>
@@ -25,7 +26,7 @@
             <a href="">Contact</a>
             <a href="">Blog</a>
             <a href="">Read Me</a>
-        </nav>
+        </div>
         <div id="hero-text">
             <p>Experience the best of many worlds from this magical 67'
                 luxury yacht based in Portofino, Italy - the thrill of exploration,
@@ -34,44 +35,54 @@
             <div class="line"></div>
         </div>
         <main>
-            <div class="card">
-                <h2>Old World Luxury</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaxa4uRhxHDql43FfG53Z01OmDUHqquk-euEg2kMgOH4UdAxe3"
-                    alt="">
-                <p class="explainer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic asperiores
-                    ducimus qui sunt sequi
-                    dicta ipsum dolorem iusto harum repudiandae laudantium recusandae distinctio vero provident,
-                    assumenda tempore repellendus dolor?
-                </p>
-                <p class="signoff">The Yacht ></p>
-            </div>
-            <div class="card">
-                <h2>Seasoned Crew</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaxa4uRhxHDql43FfG53Z01OmDUHqquk-euEg2kMgOH4UdAxe3"
-                    alt="">
-                <p class="explainer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic asperiores
-                    ducimus qui sunt sequi
-                    dicta ipsum dolorem iusto harum repudiandae laudantium recusandae distinctio vero provident,
-                    assumenda tempore repellendus dolor?
-                </p>
-                <p class="signoff">Our Crew ></p>
-            </div>
-            <div class="card">
-                <h2>A Beautiful Setting</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaxa4uRhxHDql43FfG53Z01OmDUHqquk-euEg2kMgOH4UdAxe3"
-                    alt="">
-                <p class="explainer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic asperiores
-                    ducimus qui sunt sequi
-                    dicta ipsum dolorem iusto harum repudiandae laudantium recusandae distinctio vero provident,
-                    assumenda tempore repellendus dolor?
-                </p>
-                <p class="signoff">Travel Blog ></p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="card">
+                            <h2>Old World Luxury</h2>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaxa4uRhxHDql43FfG53Z01OmDUHqquk-euEg2kMgOH4UdAxe3"
+                                alt="">
+                            <p class="explainer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic asperiores
+                                ducimus qui sunt sequi
+                                dicta ipsum dolorem iusto harum repudiandae laudantium recusandae distinctio vero provident,
+                                assumenda tempore repellendus dolor?
+                            </p>
+                            <p class="signoff">The Yacht ></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="card">
+                            <h2>Seasoned Crew</h2>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaxa4uRhxHDql43FfG53Z01OmDUHqquk-euEg2kMgOH4UdAxe3"
+                                alt="">
+                            <p class="explainer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic asperiores
+                                ducimus qui sunt sequi
+                                dicta ipsum dolorem iusto harum repudiandae laudantium recusandae distinctio vero provident,
+                                assumenda tempore repellendus dolor?
+                            </p>
+                            <p class="signoff">Our Crew ></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="card">
+                            <h2>A Beautiful Setting</h2>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSaxa4uRhxHDql43FfG53Z01OmDUHqquk-euEg2kMgOH4UdAxe3"
+                                alt="">
+                            <p class="explainer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit hic asperiores
+                                ducimus qui sunt sequi
+                                dicta ipsum dolorem iusto harum repudiandae laudantium recusandae distinctio vero provident,
+                                assumenda tempore repellendus dolor?
+                            </p>
+                            <p class="signoff">Travel Blog ></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         <div class="credit">
             <p>Banner Photo Credit: <span>Classic Sailing</span></p>
         </div>
-        <footer>
+        <footer class="foot">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-twitter"></i>
             <i class="fab fa-youtube"></i>
