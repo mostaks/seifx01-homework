@@ -1,0 +1,43 @@
+/* yellow  #f0db4f  */
+/* black  #323330  */
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    padding: 50px;
+}
+h1, h2, h3 {
+    font-size: 22px;
+}
+p {
+    font-size: 18px;
+}
+.logo {
+    display: inline-block;
+    color: #f0db4f; 
+}
+
+
+.navigation ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.navigation ul li {
+    margin: 20px;
+}
+
+
+.accountInformation {
+    display: flex;
+}
+
+.accountName {
+    margin: 0 40px 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: #323330; 
+}
+
