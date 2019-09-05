@@ -1,0 +1,188 @@
+/*font-family: 'Montserrat', sans-serif;*/
+
+/*colors
+blueishgreen #007194
+yellow orange #ffa500
+*/
+
+body, #container{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ffa500;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+
+.nav{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    margin-right: 15%;
+}
+
+.logo{
+    flex: 1 1 auto;
+    margin-left: 10%;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 35px;
+}
+
+a{
+    margin: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+.banner-area{
+    height: 100vh;
+}
+
+#home{
+    background: url("https://hackaday.com/wp-content/uploads/2018/04/margarethamilton.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+#navbar{
+    padding-top: 2vh;
+    padding-left: 2vh;
+    position: static;
+}
+
+#trivia{
+    height: 100vh;
+}
+
+#trivia p{
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 40px;
+    margin-top: 40px;
+}
+
+#top-border{
+    border-top: white solid 30px;
+}
+
+#quote1 p{
+    display: inline;
+    color: #007194;
+    font-size: 8vh;
+    margin: 3vh;
+    font-weight: 400;
+    line-height: 80px;
+}
+
+#quote1{
+    padding: 8vh;
+    text-align: center;
+    border-bottom: #007194 solid 1px;
+}
+
+#bio, #bio p{
+    padding-top: 3vh; 
+    font-size: 20px;
+}
+
+.biography{
+    padding-top: 8vh;
+    text-align: center;
+}
+
+h3{
+    color: #007194;
+    font-size: 22px;
+    padding-top: 30px;
+    width: 100%;
+    text-align: left;
+}
+
+.pagelayout{
+    width: 100%;
+    height: 300px;;
+    display: flex;
+    margin: 10px;
+    font-weight: 200;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.column{
+    width: 25%;
+    height: 300px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 30px;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.column a{
+    color: #007194;
+    font-weight: 700;
+    padding: 0;
+    margin-left: 0;
+}
+
+.column img{
+    width: 100%;
+}
+
+.column #map{
+    margin-top: 30px;
+}
+
+strong{
+    font-size: 20px;
+    color: #007194;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+footer {
+    margin-top: -80px;
+    height: 25px;
+    text-align: center;
+}
+
+footer a{
+    color: #ffa500;
+    font-size: 30px;
+    margin: 10px;
+}
+
+footer a:hover{
+    color: #ffa500;
+    font-weight: 700;
+}
+
+
+footer h4{
+    display: inline;
+    color:#ffa500;
+    font-size: 15px;
+    text-align: left;
+    padding-bottom: 10px;
+}
