@@ -5,13 +5,13 @@
 }
     # p "You will travel in one line or two lines?"
     
-    p "Enter your first line"
+    p "Please enter your first line:"
     first_line = gets.chomp
-    p "Enter your first stop"
+    p "Please enter your first stop:"
     first_stop = gets.chomp
-    p "Enter your second line"
+    p "Please enter your second line:"
     second_line = gets.chomp
-    p "Enter your second stop"
+    p "Please enter your second stop:"
     finial_stop = gets.chomp
 def plan_trip(first_line, first_stop, second_line, finial_stop)
     
@@ -24,13 +24,15 @@ def plan_trip(first_line, first_stop, second_line, finial_stop)
       if start_index <= stop_index
         forth_travel_stops = select_line[start_index..stop_index]
         total_stops = forth_travel_stops.count - 1 
-        puts "You must travel through the following stops on the #{first_line} line: #{forth_travel_stops}"
+        travel_stops = forth_travel_stops.join(', ')
+        p "You must travel through the following stops on the #{first_line} line: #{travel_stops}."
         "#{total_stops} stops in total." 
     # if only one line and back direction
       else 
         back_travel_stops = select_line[stop_index..start_index].reverse
         total_stops = back_travel_stops.count - 1
-        puts "You must travel through the following stops on the #{first_line} line: #{back_travel_stops}"
+        travel_stops = back_travel_stops.join(', ')
+        puts "You must travel through the following stops on the #{first_line} line: #{travel_stops}."
         "#{total_stops} stops in total."  
     # one line end
       end
@@ -47,20 +49,23 @@ def plan_trip(first_line, first_stop, second_line, finial_stop)
       if start_index <= start_interchange_index
         forth_travel_stops = select_first_line[start_index..start_interchange_index]
         first_line_total_stops = forth_travel_stops.count - 1
+        first_travel_stops = forth_travel_stops.join(', ')
         # if two lines, first line forth direction and second line forth direction
         if stop_interchange_index <= stop_index
-            second_line_forth_travel_stops = select_second_line[stop_interchange_index..stop_index]
-            second_line_total_stops = second_line_forth_travel_stops.count - 1
-            puts "You must travel through the following stops on the #{first_line} line: #{forth_travel_stops}"
+            second_line_forth_travel_stops = select_second_line[stop_interchange_index..stop_index] - forth_travel_stops
+            second_line_total_stops = second_line_forth_travel_stops.count
+            second_travel_stops = second_line_forth_travel_stops.join(', ')
+            puts "You must travel through the following stops on the #{first_line} line: #{first_travel_stops}."
             p "Change at Union Square."
-            puts "Your journey continues through the following stops: #{second_line_forth_travel_stops}"
+            puts "Your journey continues through the following stops: #{second_travel_stops}."
         # if two lines, first line forth direction and second line back direction
         else
-            second_line_back_travel_stops = select_second_line[stop_index..stop_interchange_index].reverse
-            second_line_total_stops = second_line_back_travel_stops.count - 1
-            puts "You must travel through the following stops on the #{first_line} line: #{forth_travel_stops}"
+            second_line_back_travel_stops = select_second_line[stop_index..stop_interchange_index].reverse - forth_travel_stops
+            second_line_total_stops = second_line_back_travel_stops.count
+            second_travel_stops = second_line_back_travel_stops.join(', ')
+            puts "You must travel through the following stops on the #{first_line} line: #{first_travel_stops}."
             p "Change at Union Square."
-            puts "Your journey continues through the following stops: #{second_line_back_travel_stops}"
+            puts "Your journey continues through the following stops: #{second_travel_stops}."
         # if two lines, first line forth direction   end
         end
         total_stops = first_line_total_stops + second_line_total_stops
@@ -69,25 +74,26 @@ def plan_trip(first_line, first_stop, second_line, finial_stop)
       else  
         back_travel_stops = select_first_line[start_interchange_index..start_index].reverse
         first_line_total_stops = back_travel_stops.count - 1
+        first_travel_stops = back_travel_stops.join(', ')
         # if two lines, first line forth direction and second line forth direction
         if stop_interchange_index <= stop_index
-            second_line_forth_travel_stops = select_second_line[stop_interchange_index..stop_index]
-            second_line_total_stops = second_line_forth_travel_stops.count - 1
-            puts "You must travel through the following stops on the #{first_line} line: #{back_travel_stops}"
+            second_line_forth_travel_stops = select_second_line[stop_interchange_index..stop_index] - back_travel_stops
+            second_line_total_stops = second_line_forth_travel_stops.count
+            second_travel_stops = second_line_forth_travel_stops.join(', ')
+            puts "You must travel through the following stops on the #{first_line} line: #{first_travel_stops}."
             p "Change at Union Square."
-            puts "Your journey continues through the following stops: #{second_line_forth_travel_stops}"
+            puts "Your journey continues through the following stops: #{second_travel_stops}."
         # if two lines, first line forth direction and second line back direction
         else
-            second_line_back_travel_stops = select_second_line[stop_index..stop_interchange_index].reverse
-            second_line_back_travel_stops
-            p second_line_back_travel_stops
-            second_line_total_stops = second_line_back_travel_stops.count - 1
-            puts "You must travel through the following stops on the #{first_line} line: #{back_travel_stops}"
+            second_line_back_travel_stops = select_second_line[stop_index..stop_interchange_index].reverse - back_travel_stops
+            second_line_total_stops = second_line_back_travel_stops.count
+            second_travel_stops = second_line_back_travel_stops.join(', ')
+            puts "You must travel through the following stops on the #{first_line} line: #{first_travel_stops}."
             p "Change at Union Square."
-            puts "Your journey continues through the following stops: #{second_line_back_travel_stops}"
+            puts "Your journey continues through the following stops: #{second_travel_stops}."
         # if two lines, first line forth direction   end
         end
-        total_stops = first_line_total_stops + second_line_total_stop
+        total_stops = first_line_total_stops + second_line_total_stops
         "#{total_stops} stops in total." 
         # if two lines, first line back direction    end
       end
@@ -95,9 +101,7 @@ def plan_trip(first_line, first_stop, second_line, finial_stop)
     end
     # function end
 end
-# test
-# p plan_trip("N", "Union Square", "6", "Astor Place")
-# p plan_trip("N", "Times Square", "6", "33rd")
+
     
 p plan_trip(first_line, first_stop, second_line, finial_stop)
 
