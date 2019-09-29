@@ -1,0 +1,79 @@
+<!--I'm able to complete the form part but isn't able to embed google map with the address. If I'm not wrong, usually google map take in longtitude & lattitude ?-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form class="needs-validation" novalidate>
+          <form>
+            <h4>User Details</h4>
+            <div class="form-group">
+              <label for="firstAndLastName">First and Last name</label>
+              <input type="text" class="form-control" id="firstAndLastName" required>
+              <div class="invalid-feedback">
+                      First and Last name is required.
+                  </div>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">
+                      Please enter a valid email.
+                  </div>
+            </div>
+            <hr/>
+            <h4>Address</h4>
+            <div class="form-group">
+              <label for="addressLine1">Address Line 1</label>
+              <input type="text" class="form-control" id="addressLine1" required>
+              <div class="invalid-feedback">
+                      Address is required.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="addressLine2">Address Line 2</label>
+              <input type="text" class="form-control" id="addressLine2">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" required>
+                <div class="invalid-feedback">
+                      City is required.
+                  </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state">State</label>
+                <input type="text" class="form-control" id="state" required>
+                  <div class="invalid-feedback">
+                      State is required.
+                  </div>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="postCode">Post code</label>
+                <input type="number" class="form-control" id="postCode"  required>
+                  <div class="invalid-feedback">
+                      Post code is required.
+                  </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="button">Submit</button>
+          </form>
+          <hr>
+          <div id ="google-map"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
