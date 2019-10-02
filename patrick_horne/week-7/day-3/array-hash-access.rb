@@ -3,25 +3,25 @@
 a = ["Anil", "Erik", "Jonathan"]
 
 # A1. How would you return the string "Erik"?
-a[1]
+p a[1]
 
 # A2. How would you add your name to the array?
-a.push('Patrick')
+p a.push('Patrick')
 
 # B
-h = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
+p h = {0 => "Zero", 1 => "One", :two => "Two", "two" => 2}
 
 # B1. How would you return the string "One"?
-h[1]
+p h[1]
 
 # B2. How would you return the string "Two"?
-h[:two]
+p h[:two]
 
 # B3. How would you return the number 2?
-h['two']
+p h['two']
 
 # B4. How would you add {3 => "Three"} to the hash?
-h[3] = 'Three'
+p h[3] = 'Three'
 
 # B5. How would you add {:four => 4} to the hash?
 h[:four] = 4

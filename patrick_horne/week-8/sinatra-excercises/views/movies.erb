@@ -1,6 +1,6 @@
 <ul>
     <% @movies.each_with_index  do |movie, index| %>    
-      <li onclick="function() {<%= redirect to ('/movies/#{index}')} %>"> 
+      <li onclick="location.href='/movies/<%= index.to_s %>'"> 
             <%= movie %>
             <form action="/forms/movies/<%= index.to_s %>/delete" method="post">
                 <button type="submit">Delete</button>

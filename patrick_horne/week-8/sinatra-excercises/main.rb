@@ -59,3 +59,14 @@ get '/movies/:index' do
   @movie = $movies[index]
   erb :movie
 end
+
+post '/forms/movies/:index/edit' do
+  index = params[:index]
+  request.body.rewind
+  payload = JSON.parse(request.body.read, symbolize_names: true)
+
+  # Edit the movie at index
+  $movies[index] = index
+  json payload
+
+end
