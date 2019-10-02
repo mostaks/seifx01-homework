@@ -1,0 +1,19 @@
+<ul>
+    <% @movies.each_with_index  do |movie, index| %>    
+      <li onclick="function() {<%= redirect to ('/movies/#{index}')} %>"> 
+            <%= movie %>
+            <form action="/forms/movies/<%= index.to_s %>/delete" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </li>    
+    <% end %>
+</ul>
+
+<br/>
+
+<form action="/forms/movies/new" method="post">
+    <input type="text" name="movieName" placeholder="movie name">
+    <button type="submit">Add</button>
+</form>
+
+
