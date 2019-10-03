@@ -1,9 +1,9 @@
 @bases = {
-	"A" => 0,
-	"C" => 0,
-	"G" => 0,
-	"T" => 0,
-	"Unknown" => 0
+	:A => 0,
+	:C => 0,
+	:G => 0,
+	:T => 0,
+	:Unknown => 0
 }
 
 def count input 
