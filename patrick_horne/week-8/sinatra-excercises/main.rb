@@ -52,7 +52,6 @@ delete '/api/movies/:index' do
     json movieToDelete
 end
 
-
 get '/movies/:index' do
   index = params[:index].to_i
   @index = index
@@ -61,12 +60,14 @@ get '/movies/:index' do
 end
 
 post '/forms/movies/:index/edit' do
-  index = params[:index]
+  index = params[:index].to_i
   request.body.rewind
-  payload = JSON.parse(request.body.read, symbolize_names: true)
+  payload = request.body.read
+  # payload = JSON.parse(request.body.read, symbolize_names: true)
 
+  p payload
   # Edit the movie at index
-  $movies[index] = index
-  json payload
-
+  $movies[index] = payload[:newMovie]
+  redirect '/movies'
+  json payload[:newMovie]
 end
