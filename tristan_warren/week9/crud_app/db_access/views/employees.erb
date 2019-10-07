@@ -1,0 +1,9 @@
+<ul>
+  <% @employees.each do |item| %>
+    <li>
+      <a href="/employees/<%= item['id'].to_s %>">link</a>
+      -- <%= item['first_name'] + '  :  ' + item['salary'].to_s %>
+    </li>
+
+  <% end %>
+</ul>
