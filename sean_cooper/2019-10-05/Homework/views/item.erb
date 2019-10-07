@@ -1,0 +1,27 @@
+<div class="card mb-3">
+  <img src=<%= @item['item_pic'].to_s %> class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @item['item_name'] %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Seller: <%= @item['seller'].to_s %></h6>
+    <p class="card-text"><%= @item['item_description'].to_s %></p>
+
+    <a href="#" class="btn btn-light">Current Bid: $<%= @item['current_bid'].to_s %></a>
+
+<form method="post" action="/marketplace/<%= @item['id'].to_s %>/bid">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Bid: $</span>
+        </div>
+        <input type="float" name="current_bid" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+        </div>
+    </div>
+    <button href="#" type="submit" class="btn btn-danger">Confirm Bid</button>
+</form>
+
+    <a href="#" class="btn btn-success">Buy: $<%= @item['buy_out'].to_s %></a>
+
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
