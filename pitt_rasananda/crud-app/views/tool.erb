@@ -1,0 +1,22 @@
+
+<div class="card">
+    <div class="container">
+        <div class="row">
+            <div class="col-10 card-body">
+                <h2><%= @tool['tool_name'] %></h2>
+                <p><a target="_blank" href="<%= @tool['website'] %>"><%= @tool['website'] %></a></p>
+                <img src="/img/sketch.png" class="mx-auto d-block">
+                <p><%= @tool['tool_des'] %></p>
+            </div>
+            <div class="col-2 card-body menu">
+                <input type="submit" class="btn btn-outline-light" value="Back" onclick="location.href='/tools';"/>
+                <form action="/tools/edit/<%= @tool['tool_name']%>">
+                <input type="submit" class="btn btn-outline-light" value="Edit"/>
+                </form>
+                <form action="/delete/<%= @tool['tool_name']%>" method="post">
+                <input type="submit" class="btn btn-outline-light" value="Delete"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
