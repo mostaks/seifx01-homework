@@ -1,0 +1,13 @@
+<h2>Edit <%= @employee['first_name']%></h2>
+<form method="post" action="/employees/<%= @employee['id'].to_s %>">
+  <label>Business Title</label>
+  <input type="text" name='business_title' value="<%= @employee['business_title'] %>">
+  <label>Salary</label>
+  <input type="text" name='salary' value="<%= @employee['salary'] %>">
+
+  <input type="submit">
+</form>
+
+<form method="post" action="/employees/delete/<%= @employee['id'].to_s%>">
+<input type="submit" value="delete">
+</form>

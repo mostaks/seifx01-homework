@@ -13,19 +13,23 @@
     <div>
         <header>
             <h2>Account Name</h2>
-            <p>Name</p>
+            <label for="accountName">Account Name</label>
+            <input type="text" id='account-name'>
+            <button id='add-account'>Add Account</button>
         </header>
         <middle>
-            <h2>Account Balance</h2>
-            <p>Bal</p>
+            <h2>Account List</h2>
+            <ul id="account-list"></ul>
         </middle>
         <footer>
-            <button>Deposit</button>
+            <input type="number" id="money">
+            <button id='deposit'>Deposit</button>
             <button>Withdraw</button>
         </footer>
 
     </div>
-    <script src="bank.js"></script>
+
 </body>
+<script src="bank.js"></script>
 
 </html>
