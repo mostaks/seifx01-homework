@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+
+    <% @books.each do |item| %>
+        <div class="input-box col-sm-12 col-md-6 col-lg-4">
+            <div class="card" style="width: 18rem;">
+            <img src=<%= item['book_img'].to_s %> class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><%= item['book_name'] %></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Author: <%= item['book_author'].to_s %></h6>
+                    <p class="card-text"><%= item['book_description'].to_s %></p>
+                    <a href="/books/<%= item['id'].to_s %>" class="btn btn-success">More info...</a>
+                </div>
+            </div>
+        </div>
+    <% end %>
+
+    </div>
+</div>
+
+<form method="post" action="/books/add" class="card card-body">
+
+    <div class="form-group row">
+        <label for="id" class="col-sm-2 col-form-label">ID</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="id" name="id">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="book_name" class="col-sm-2 col-form-label">Book name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="book_name" name="book_name">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="book_author" class="col-sm-2 col-form-label">Author</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="book_author" name="book_author">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="book_img" class="col-sm-2 col-form-label">Image</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="book_img" name="book_img">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="book_description" class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="book_description" name="book_description">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="book_rating" class="col-sm-2 col-form-label">Rating</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="book_rating" name="book_rating">
+        </div>
+    </div>
+    <div class="form-group row text-right"">
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary mb-2" style="float: right">new</button>
+        </div>
+    </div>
+
+</form>
