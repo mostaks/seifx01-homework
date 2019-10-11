@@ -6,7 +6,7 @@ CREATE TABLE movies (
   rating NUMBER
 );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "Black Panther",
     "Ryan Coogler",
@@ -16,7 +16,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
   );
 
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "Citizen Kane",
     "Orson Welles",
@@ -26,7 +26,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
   );
 
   
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "The Wizard of Oz",
     "King Vidor, Victor Fleming",
@@ -35,7 +35,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
     98
   );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "BlacKKKlansman",
     "Spike Lee",
@@ -44,7 +44,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
     96
   );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "Get Out",
     "Jordan Peele",
@@ -53,7 +53,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
     98
   );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "Mad Max: Fury Road",
     "George Miller",
@@ -62,7 +62,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
     97
   );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "The Third Man",
     "Carol Reed",
@@ -71,7 +71,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
     99
   );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "Moonlight",
     "Orson Welles",
@@ -80,7 +80,7 @@ INSERT INTO movies(title, director, year_released, box_office, tomatometer)
     98
   );
 
-INSERT INTO movies(title, director, year_released, box_office, tomatometer)
+INSERT INTO movies(title, director, year_released, box_office, rating)
   VALUES (
     "Modern Times",
     "Orson Welles",
