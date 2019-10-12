@@ -1,0 +1,9 @@
+<ul>
+  <div>Hello</div>
+  <% @catalog.each do |i|%>
+    <li>
+        <%= @catalog[i]['title'] %>
+    </li>
+  <% end %>
+</ul>
+

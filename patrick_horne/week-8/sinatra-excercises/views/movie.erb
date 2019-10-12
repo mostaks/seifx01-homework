@@ -1,0 +1,9 @@
+<div>
+  <%= @movie %> 
+  <form action="/forms/movies/<%= @index.to_s %>/edit" method="post">
+    <input name = 'newMovie' placeholder="Enter new title here." type="text"></input>
+    <button type"submit">Submit</button>
+  </form>
+  <% puts "Index: #{@index}" %>
+</div>
+
