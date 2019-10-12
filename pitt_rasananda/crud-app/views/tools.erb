@@ -1,0 +1,15 @@
+<div class="row">
+<% @tools.each do |tool| %>
+
+    <div class="col-3">
+        <div class="card">
+            <img class="card-img-top" src="" >
+            <div class="card-body">
+                <a href="/tools/<%=tool['tool_name'] %>">
+                    <div class="text-center"><%= tool['tool_name'] %></div>
+                </a>
+            </div>
+        </div>
+    </div>
+<% end %>
+</div>
