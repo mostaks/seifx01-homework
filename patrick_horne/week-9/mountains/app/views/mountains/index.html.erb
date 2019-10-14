@@ -1,0 +1,12 @@
+<h1>Mountains of the world</h1>
+
+
+<ul class="list-group">
+  <% @mountains.each do |mountain| %>  
+    <li class="list-group-item">
+      <a href="<%= mountain.id %>"><%= mountain.name %>
+    </li>  
+  <% end %>
+</ul>
+
+<button class="btn btn-primary">New Mountain</button>
