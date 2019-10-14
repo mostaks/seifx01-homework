@@ -1,0 +1,16 @@
+<div class="card text-center">
+  <div class="card-body">
+    <h1 class="card-title">All Planets</h1>
+    <p class="card-text">Planet time</p>
+    <a href="/planets/new" class="btn btn-primary">Add a Planet</a>
+  </div>
+</div>
+
+
+<% @planets.each do |planet| %>
+  <p>
+    <%= link_to planet.name, planet_path(planet.id) %>
+    has
+    <%= pluralize planet.moons, 'moon' %>.
+  </p>
+<% end %>
