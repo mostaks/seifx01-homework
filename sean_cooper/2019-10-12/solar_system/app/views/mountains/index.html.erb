@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+
+  <div class="input-box col-md-12">
+    <div class="card text-center">
+      <div class="card-body">
+        <h1 class="card-title">All Mountains</h1>
+        <p class="card-text">this page has mountains</p>
+        <a href="/mountains/new" class="btn btn-primary">Add a mountain</a>
+      </div>
+    </div>
+  </div>
+
+
+  <% @mountains.each do |mountain| %>
+    <div class="input-box col-sm-12 col-md-6 col-lg-4">
+      <div class="card" style="width: 18rem;">
+        <img src=<%= mountain.image %> class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= mountain.name %></h5>
+          <p class="card-text"><%= mountain.description %></p>
+          <p class="card-text">Rating: <%= mountain.rating %></p>
+          <a href="/mountains/<%= mountain.id %>" class="btn btn-primary">Edit</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  </div>
+</div>
