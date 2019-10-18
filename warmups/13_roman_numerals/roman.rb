@@ -1,6 +1,7 @@
 
 class Roman
-def initialize
+def initialize number
+  @number = number.to_i
     @roman_map = {
       1000 => "M",
       900 => "CM",
@@ -18,22 +19,22 @@ def initialize
     }
 end
 
-  def to_roman number
+  def to_roman
     result = ""
     @roman_map.each do |key, value|
-      while number >= key
+      while @number >= key
         result += value
-        puts "number : #{number} >= #{key}"
+        puts "number : #{@number} >= #{key}"
         puts "roman number: #{result}"
-        number -= key
-        puts "new number: #{number}"
+        @number -= key
+        puts "new number: #{@number}"
       end
   end
   result
   end
 end
 
-caesar = Roman.new
 puts "Provide a number your majesty: "
-caesars_number = gets.chomp.to_i
-puts caesar.to_roman caesars_number
+caesars_number = gets.chomp
+caesar = Roman.new caesars_number
+puts caesar.to_roman
