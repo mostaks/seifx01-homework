@@ -1,0 +1,2212 @@
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070733)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070733)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070951)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191013070951"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-13 07:10:07.577448"], ["updated_at", "2019-10-13 07:10:07.577448"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-13 07:10:58.916136"], ["updated_at", "2019-10-13 07:10:58.916136"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-13 07:10:58.942867"], ["updated_at", "2019-10-13 07:10:58.942867"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-10-13 07:10:58.947995"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-13 07:10:58.952923"], ["updated_at", "2019-10-13 07:10:58.952923"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2019-10-14 00:06:32.001390"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-10-14 00:06:32.009427"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:06:51.084876"], ["updated_at", "2019-10-14 00:06:51.084876"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-14 00:06:51.097947"], ["updated_at", "2019-10-14 00:06:51.097947"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:06:51.122793"], ["updated_at", "2019-10-14 00:06:51.122793"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-10-14 00:06:51.127942"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-14 00:06:51.133859"], ["updated_at", "2019-10-14 00:06:51.133859"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:09:12.938245"], ["updated_at", "2019-10-14 00:09:12.938245"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-14 00:09:12.953888"], ["updated_at", "2019-10-14 00:09:12.953888"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:09:12.979042"], ["updated_at", "2019-10-14 00:09:12.979042"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-10-14 00:09:12.985560"], ["key", "environment"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-14 00:09:12.993188"], ["updated_at", "2019-10-14 00:09:12.993188"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Everest"], ["height_metres", 8848], ["country", "Nepal"], ["first_ascent", 1953], ["created_at", "2019-10-14 00:09:13.010936"], ["updated_at", "2019-10-14 00:09:13.010936"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.3ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["height_metres", 8611], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 00:09:13.016020"], ["updated_at", "2019-10-14 00:09:13.016020"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kangchenjunga"], ["height_metres", 8568], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 00:09:13.021913"], ["updated_at", "2019-10-14 00:09:13.021913"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lhotse"], ["height_metres", 8516], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 00:09:13.028356"], ["updated_at", "2019-10-14 00:09:13.028356"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Makalu"], ["height_metres", 8485], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 00:09:13.034829"], ["updated_at", "2019-10-14 00:09:13.034829"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cho Oyu"], ["height_metres", 8188], ["country", "Nepal"], ["first_ascent", 1954], ["created_at", "2019-10-14 00:09:13.040139"], ["updated_at", "2019-10-14 00:09:13.040139"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dhaulagiri I"], ["height_metres", 8167], ["country", "Nepal"], ["first_ascent", 1960], ["created_at", "2019-10-14 00:09:13.044478"], ["updated_at", "2019-10-14 00:09:13.044478"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Manaslu"], ["height_metres", 8163], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 00:09:13.051784"], ["updated_at", "2019-10-14 00:09:13.051784"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Naga Parbat"], ["height_metres", 8126], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 00:09:13.057216"], ["updated_at", "2019-10-14 00:09:13.057216"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Annapurna I"], ["height_metres", 8091], ["country", "Nepal"], ["first_ascent", 1950], ["created_at", "2019-10-14 00:09:13.061868"], ["updated_at", "2019-10-14 00:09:13.061868"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 5]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 6]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.2ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 9]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Destroy (0.1ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 10]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Everest"], ["height_metres", 8848], ["country", "Nepal"], ["first_ascent", 1953], ["created_at", "2019-10-14 00:35:40.900811"], ["updated_at", "2019-10-14 00:35:40.900811"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.3ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["height_metres", 8611], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 00:35:40.905099"], ["updated_at", "2019-10-14 00:35:40.905099"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kangchenjunga"], ["height_metres", 8568], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 00:35:40.910351"], ["updated_at", "2019-10-14 00:35:40.910351"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lhotse"], ["height_metres", 8516], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 00:35:40.914609"], ["updated_at", "2019-10-14 00:35:40.914609"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Makalu"], ["height_metres", 8485], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 00:35:40.918790"], ["updated_at", "2019-10-14 00:35:40.918790"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cho Oyu"], ["height_metres", 8188], ["country", "Nepal"], ["first_ascent", 1954], ["created_at", "2019-10-14 00:35:40.922787"], ["updated_at", "2019-10-14 00:35:40.922787"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dhaulagiri I"], ["height_metres", 8167], ["country", "Nepal"], ["first_ascent", 1960], ["created_at", "2019-10-14 00:35:40.926851"], ["updated_at", "2019-10-14 00:35:40.926851"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Manaslu"], ["height_metres", 8163], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 00:35:40.932303"], ["updated_at", "2019-10-14 00:35:40.932303"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Naga Parbat"], ["height_metres", 8126], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 00:35:40.937315"], ["updated_at", "2019-10-14 00:35:40.937315"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Annapurna I"], ["height_metres", 8091], ["country", "Nepal"], ["first_ascent", 1950], ["created_at", "2019-10-14 00:35:40.941945"], ["updated_at", "2019-10-14 00:35:40.941945"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070951)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191013070951"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:45:54.009280"], ["updated_at", "2019-10-14 00:45:54.009280"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070951)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191013070951"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:47:09.466440"], ["updated_at", "2019-10-14 00:47:09.466440"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070951)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191013070951"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 00:47:57.954376"], ["updated_at", "2019-10-14 00:47:57.954376"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 02:28:42.746692"], ["updated_at", "2019-10-14 02:28:42.746692"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-14 02:28:42.752617"], ["updated_at", "2019-10-14 02:28:42.752617"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "mountains"[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191013070951)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 02:28:42.780679"], ["updated_at", "2019-10-14 02:28:42.780679"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-10-14 02:28:42.787224"], ["key", "environment"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "ef147439a75113efefef9b4b00830008d07c46dc"], ["created_at", "2019-10-14 02:28:42.794956"], ["updated_at", "2019-10-14 02:28:42.794956"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Everest"], ["height_metres", 8848], ["country", "Nepal"], ["first_ascent", 1953], ["created_at", "2019-10-14 02:28:42.814977"], ["updated_at", "2019-10-14 02:28:42.814977"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["height_metres", 8611], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 02:28:42.820309"], ["updated_at", "2019-10-14 02:28:42.820309"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kangchenjunga"], ["height_metres", 8568], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 02:28:42.825319"], ["updated_at", "2019-10-14 02:28:42.825319"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lhotse"], ["height_metres", 8516], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 02:28:42.831126"], ["updated_at", "2019-10-14 02:28:42.831126"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Makalu"], ["height_metres", 8485], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 02:28:42.835148"], ["updated_at", "2019-10-14 02:28:42.835148"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cho Oyu"], ["height_metres", 8188], ["country", "Nepal"], ["first_ascent", 1954], ["created_at", "2019-10-14 02:28:42.840636"], ["updated_at", "2019-10-14 02:28:42.840636"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dhaulagiri I"], ["height_metres", 8167], ["country", "Nepal"], ["first_ascent", 1960], ["created_at", "2019-10-14 02:28:42.844719"], ["updated_at", "2019-10-14 02:28:42.844719"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Manaslu"], ["height_metres", 8163], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 02:28:42.850341"], ["updated_at", "2019-10-14 02:28:42.850341"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Naga Parbat"], ["height_metres", 8126], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 02:28:42.854518"], ["updated_at", "2019-10-14 02:28:42.854518"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Annapurna I"], ["height_metres", 8091], ["country", "Nepal"], ["first_ascent", 1950], ["created_at", "2019-10-14 02:28:42.858572"], ["updated_at", "2019-10-14 02:28:42.858572"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2019-10-14 13:41:45 +1100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.0) lib/active_record/migration.rb:587:in `check_pending!'
+activerecord (6.0.0) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMountains (20191013070951)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "mountains" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" text, "height_metres" integer, "country" text, "first_ascent" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191013070951"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-14 02:42:00.047737"], ["updated_at", "2019-10-14 02:42:00.047737"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-10-14 13:42:02 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.3ms | Allocations: 205)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1432)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Everest"], ["height_metres", 8848], ["country", "Nepal"], ["first_ascent", 1953], ["created_at", "2019-10-14 02:42:21.179659"], ["updated_at", "2019-10-14 02:42:21.179659"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "K2"], ["height_metres", 8611], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 02:42:21.183127"], ["updated_at", "2019-10-14 02:42:21.183127"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kangchenjunga"], ["height_metres", 8568], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 02:42:21.186287"], ["updated_at", "2019-10-14 02:42:21.186287"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Lhotse"], ["height_metres", 8516], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 02:42:21.189412"], ["updated_at", "2019-10-14 02:42:21.189412"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Makalu"], ["height_metres", 8485], ["country", "Nepal"], ["first_ascent", 1955], ["created_at", "2019-10-14 02:42:21.192498"], ["updated_at", "2019-10-14 02:42:21.192498"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cho Oyu"], ["height_metres", 8188], ["country", "Nepal"], ["first_ascent", 1954], ["created_at", "2019-10-14 02:42:21.195720"], ["updated_at", "2019-10-14 02:42:21.195720"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dhaulagiri I"], ["height_metres", 8167], ["country", "Nepal"], ["first_ascent", 1960], ["created_at", "2019-10-14 02:42:21.199418"], ["updated_at", "2019-10-14 02:42:21.199418"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Manaslu"], ["height_metres", 8163], ["country", "Nepal"], ["first_ascent", 1956], ["created_at", "2019-10-14 02:42:21.208293"], ["updated_at", "2019-10-14 02:42:21.208293"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.2ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Naga Parbat"], ["height_metres", 8126], ["country", "Pakistan"], ["first_ascent", 1953], ["created_at", "2019-10-14 02:42:21.212226"], ["updated_at", "2019-10-14 02:42:21.212226"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMountain Create (0.1ms)[0m  [1m[32mINSERT INTO "mountains" ("name", "height_metres", "country", "first_ascent", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Annapurna I"], ["height_metres", 8091], ["country", "Nepal"], ["first_ascent", 1950], ["created_at", "2019-10-14 02:42:21.216099"], ["updated_at", "2019-10-14 02:42:21.216099"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for ::1 at 2019-10-14 13:53:40 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 92)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/patrick/code/seifx01-homework/patrick_horne/week-9/mountains/public/packs
+Completed 200 OK in 5544ms (Views: 5543.9ms | ActiveRecord: 0.0ms | Allocations: 1445845)
+
+
+Started GET "/" for ::1 at 2019-10-14 13:54:24 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 97)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 5944)
+
+
+Started GET "/" for ::1 at 2019-10-14 13:56:13 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3115)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/boostrap.
+        on line 18:1 of app/assets/stylesheets/application.scss
+>> @import 'bootstrap/scss/boostrap'
+
+   ^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2019-10-14 13:56:34 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3110)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: bootstrap/scss/bootstrap.
+        on line 18:1 of app/assets/stylesheets/application.scss
+>> @import 'bootstrap/scss/bootstrap'
+
+   ^
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:18
+app/views/layouts/application.html.erb:8
+Started GET "/" for ::1 at 2019-10-14 13:56:49 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 920ms (Views: 919.5ms | ActiveRecord: 0.0ms | Allocations: 32909)
+
+
+Started GET "/" for ::1 at 2019-10-14 13:57:18 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 4967)
+
+
+Started GET "/" for ::1 at 2019-10-14 13:57:32 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 11354)
+
+
+Started GET "/" for ::1 at 2019-10-14 15:53:08 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1331)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 3040)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: <button class="btn btn-primary">This is a button</button>
+    5: 
+    6: <ul class="list-group">
+    7:   <% @movies.each do |movie| %>  
+    8:     <li><%= movie.name %></li>  
+    9:   <% end %>
+   10: </ul>
+  
+app/views/mountains/index.html.erb:7
+Started GET "/" for ::1 at 2019-10-14 15:53:58 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 6153)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.9ms | Allocations: 18412)
+
+
+Started GET "/" for ::1 at 2019-10-14 15:54:34 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 874)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 13133)
+
+
+Started GET "/" for ::1 at 2019-10-14 17:06:38 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 5424)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 18074)
+
+
+Started GET "/" for ::1 at 2019-10-14 17:08:07 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 920)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 13166)
+
+
+Started GET "/" for ::1 at 2019-10-14 17:08:39 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 914)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 13160)
+
+
+Started GET "/3" for ::1 at 2019-10-14 17:08:44 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/3"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-14 17:08:57 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 739)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 12054)
+
+
+Started GET "/" for ::1 at 2019-10-14 17:09:48 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:7
+  Rendered mountains/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 914)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 13164)
+
+
+Started GET "/" for ::1 at 2019-10-14 17:10:59 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 919)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 13171)
+
+
+Started GET "/10" for ::1 at 2019-10-14 17:11:03 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/10"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-14 17:11:05 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 739)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 12050)
+
+
+Started GET "/" for ::1 at 2019-10-14 17:11:32 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 5704)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 17572)
+
+
+Started GET "/1" for ::1 at 2019-10-14 17:11:33 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=kkjj" for ::1 at 2019-10-14 21:17:59 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"kkjj"}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1669)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:18:06 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/1"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/1" for ::1 at 2019-10-14 21:18:51 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 117)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 18937)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:19:22 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 8)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 2.2ms | Allocations: 17437)
+
+
+Started GET "/" for ::1 at 2019-10-14 21:19:24 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 939)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 12393)
+
+
+Started GET "/" for ::1 at 2019-10-14 21:19:42 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 915)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 13167)
+
+
+Started GET "/" for ::1 at 2019-10-14 21:22:27 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 914)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 13170)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:22:29 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 12090)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/1" for ::1 at 2019-10-14 21:34:59 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 230.9ms | Allocations: 174755)
+Completed 500 Internal Server Error in 234ms (ActiveRecord: 0.2ms | Allocations: 176535)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mountain' for #<#<Class:0x00007f360c909a90>:0x00007f360c907d80>
+Did you mean?  @mountain):
+    1: 
+    2: <div class="jumbotron">
+    3:   <h1 class="display-4"><%= @mountain.name %></h1>    
+    4:   <p class="lead"><% @mountain.name %> is situated in <%= @mountain.country %>. It stands <%= mountain.height_metres %> metres tall and was first ascended in <%= @mountain.first_ascent %>.</p>
+    5: Height: <%= @mountain.height_metres %>
+    6: </div>
+  
+app/views/mountains/show.html.erb:4
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/1" for ::1 at 2019-10-14 21:38:49 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 314.3ms | Allocations: 174776)
+Completed 500 Internal Server Error in 322ms (ActiveRecord: 0.5ms | Allocations: 181477)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mountain' for #<#<Class:0x00007f36079f2c90>:0x00007f36079f1368>
+Did you mean?  @mountain):
+    1: 
+    2: <div class="jumbotron">
+    3:   <h1 class="display-4"><%= @mountain.name %></h1>    
+    4:   <p class="lead"><% @mountain.name %> is situated in <%= @mountain.country %>. It stands <%= mountain.height_metres %> metres tall and was first ascended in <%= @mountain.first_ascent %>.</p>
+    5: Height: <%= @mountain.height_metres %>
+    6: </div>
+  
+app/views/mountains/show.html.erb:4
+Started GET "/1" for ::1 at 2019-10-14 21:38:51 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 355.3ms | Allocations: 174540)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 0.1ms | Allocations: 175557)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `mountain' for #<#<Class:0x00007f36079f2c90>:0x00007f360cd6b9d0>
+Did you mean?  @mountain):
+    1: 
+    2: <div class="jumbotron">
+    3:   <h1 class="display-4"><%= @mountain.name %></h1>    
+    4:   <p class="lead"><% @mountain.name %> is situated in <%= @mountain.country %>. It stands <%= mountain.height_metres %> metres tall and was first ascended in <%= @mountain.first_ascent %>.</p>
+    5: Height: <%= @mountain.height_metres %>
+    6: </div>
+  
+app/views/mountains/show.html.erb:4
+Started GET "/1" for ::1 at 2019-10-14 21:39:35 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 199)
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.5ms | Allocations: 18450)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:39:57 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 191)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 12949)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:40:19 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 194)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 12945)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:40:38 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 194)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 12946)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:40:46 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 11848)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:40:51 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 193)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.1ms | Allocations: 12947)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:44:19 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 231)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.2ms | Allocations: 12984)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:45:27 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 227)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 12979)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:46:07 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 224)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms | Allocations: 12975)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:46:18 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 223)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 12973)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:49:42 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 238)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.1ms | Allocations: 12988)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:50:16 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 239)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 12992)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:50:36 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 238)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 12996)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:53:46 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 249)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 12997)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:54:00 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 243)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 13001)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:55:51 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 246)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.1ms | Allocations: 12998)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:56:01 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 244)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 13004)
+
+
+Started GET "/1" for ::1 at 2019-10-14 21:56:09 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 247)
+Completed 200 OK in 15ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 13016)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:13:07 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 13020)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:13:57 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 249)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 13020)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:14:26 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 248)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 13005)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:14:27 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 11849)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:14:40 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 248)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 13006)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:15:25 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 247)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 13003)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:15:45 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 248)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 13001)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:16:03 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 244)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 12993)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:16:04 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 11851)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:16:12 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 24)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 11848)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:16:23 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 248)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 12997)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:16:30 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 940)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 12390)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:16:33 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 740)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 12052)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:17:24 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 254)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 13007)
+
+
+Started GET "/delete" for ::1 at 2019-10-14 22:17:27 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1198)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2203)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="jumbotron">
+    2: <button type="button" class="btn btn-primary" onclick="location.href='/index'">Back</button>
+    3:   <h1 class="display-4"><%= @mountain.name %></h1>    
+    4:   <hr class="my-4">
+    5:   <p class="lead"><%= @mountain.name %> is situated in <%= @mountain.country %>. It stands <%= @mountain.height_metres %> metres tall and was first ascended in <%= @mountain.first_ascent %></p>
+    6:   <p>Height: <%= @mountain.height_metres %> m / <%= (@mountain.height_metres * 3.28084).to_i %> ft.</p>
+  
+app/views/mountains/show.html.erb:3
+Started GET "/1" for ::1 at 2019-10-14 22:17:34 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 254)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 13012)
+
+
+Started GET "/delete" for ::1 at 2019-10-14 22:17:35 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1198)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 2202)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="jumbotron">
+    2: <button type="button" class="btn btn-primary" onclick="location.href='/index'">Back</button>
+    3:   <h1 class="display-4"><%= @mountain.name %></h1>    
+    4:   <hr class="my-4">
+    5:   <p class="lead"><%= @mountain.name %> is situated in <%= @mountain.country %>. It stands <%= @mountain.height_metres %> metres tall and was first ascended in <%= @mountain.first_ascent %></p>
+    6:   <p>Height: <%= @mountain.height_metres %> m / <%= (@mountain.height_metres * 3.28084).to_i %> ft.</p>
+  
+app/views/mountains/show.html.erb:3
+Started GET "/1" for ::1 at 2019-10-14 22:18:07 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 273)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 13032)
+
+
+Started GET "/1/delete" for ::1 at 2019-10-14 22:18:10 +1100
+Processing by MountainsController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:19:in `delete'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1730)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/mountains_controller.rb:20:in `delete'
+Started GET "/1/delete" for ::1 at 2019-10-14 22:19:34 +1100
+Processing by MountainsController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:19:in `delete'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1728)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/mountains_controller.rb:20:in `delete'
+Started GET "/1" for ::1 at 2019-10-14 22:19:36 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 293)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 13050)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:19:47 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 292)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 13052)
+
+
+Started GET "/1/edit" for ::1 at 2019-10-14 22:19:48 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1748)
+
+
+  
+NoMethodError (undefined method `name=' for nil:NilClass):
+  
+app/controllers/mountains_controller.rb:12:in `edit'
+Started GET "/1" for ::1 at 2019-10-14 22:32:47 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 291)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 13073)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:32:49 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 940)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 12393)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:51:36 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 936)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 13178)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:51:37 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 291)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 12271)
+
+
+Started GET "/1/edit" for ::1 at 2019-10-14 22:51:38 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:11:in `edit'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms | Allocations: 1745)
+
+
+  
+NoMethodError (undefined method `name=' for nil:NilClass):
+  
+app/controllers/mountains_controller.rb:12:in `edit'
+Started GET "/1/edit" for ::1 at 2019-10-14 22:52:02 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:11:in `edit'
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 103)
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 0.6ms | Allocations: 18374)
+
+
+Started GET "/1/edit" for ::1 at 2019-10-14 22:53:04 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:11:in `edit'
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (Duration: 0.3ms | Allocations: 100)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 12896)
+
+
+Started POST "/1/edit" for ::1 at 2019-10-14 22:53:16 +1100
+  
+ActionController::RoutingError (No route matches [POST] "/1/edit"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/1/edit" for ::1 at 2019-10-14 22:53:46 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#edit as HTML
+  Parameters: {"name"=>"poopoo", "height_metres"=>"12", "country"=>"hello", "firstAscent"=>"123", "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 440)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:217:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:249:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:244:in `verify_authenticity_token'
+activesupport (6.0.0) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.0) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.0) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/1/edit" for ::1 at 2019-10-14 22:53:52 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/1/edit"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/1" for ::1 at 2019-10-14 22:54:20 +1100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 295)
+Completed 200 OK in 14ms (Views: 7.4ms | ActiveRecord: 0.6ms | Allocations: 17881)
+
+
+Started GET "/1/edit" for ::1 at 2019-10-14 22:54:21 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:11:in `edit'
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 11859)
+
+
+Started POST "/1/edit" for ::1 at 2019-10-14 22:54:29 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"name"=>"asdf", "height_metres"=>"234", "country"=>"asdf", "firstAscent"=>"234", "id"=>"1"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms | Allocations: 465)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:217:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:249:in `handle_unverified_request'
+actionpack (6.0.0) lib/action_controller/metal/request_forgery_protection.rb:244:in `verify_authenticity_token'
+activesupport (6.0.0) lib/active_support/callbacks.rb:429:in `block in make_lambda'
+activesupport (6.0.0) lib/active_support/callbacks.rb:201:in `block (2 levels) in halting'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.0) lib/active_support/callbacks.rb:202:in `block in halting'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `block in invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `each'
+activesupport (6.0.0) lib/active_support/callbacks.rb:514:in `invoke_before'
+activesupport (6.0.0) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.0) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.0) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.0) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.0) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.0) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (6.0.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-10-14 22:58:26 +1100
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 5862)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.5ms | Allocations: 18520)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:58:27 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 298)
+Completed 200 OK in 12ms (Views: 9.0ms | ActiveRecord: 0.3ms | Allocations: 12386)
+
+
+Started GET "/1/delete" for ::1 at 2019-10-14 22:58:29 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/1/delete"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/1" for ::1 at 2019-10-14 22:59:08 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 274)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 13030)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:59:12 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 914)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms | Allocations: 12361)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:59:13 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 740)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 12049)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:59:15 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 11849)
+
+
+Started GET "/1/edit" for ::1 at 2019-10-14 22:59:30 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:11:in `edit'
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (Duration: 0.4ms | Allocations: 98)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 12093)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:59:44 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 274)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 13031)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:59:46 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 11847)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:59:48 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 914)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 12373)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:59:49 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 740)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 12051)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:59:50 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 11849)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:59:51 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 11844)
+
+
+Started GET "/index" for ::1 at 2019-10-14 22:59:52 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:5
+  Rendered mountains/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 740)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 12048)
+
+
+Started GET "/1" for ::1 at 2019-10-14 22:59:58 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 11848)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:00 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 11845)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:02 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.1ms | Allocations: 11853)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:03 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 27)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 11850)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:04 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 27)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 11847)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:05 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 11849)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:06 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 11848)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:06 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 11848)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:07 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.1ms | Allocations: 11843)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:07 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 11851)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:08 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 27)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 11852)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:08 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 11844)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:09 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.1ms | Allocations: 11851)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:14 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.1ms | Allocations: 11844)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:15 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 11852)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:16 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 11848)
+
+
+Started GET "/1" for ::1 at 2019-10-14 23:00:16 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:7:in `show'
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 27)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 11845)
+
+

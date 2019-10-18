@@ -12,10 +12,14 @@ p {
 .hero {
     display: block;
     position: absolute;
-    margin: 25% auto 0;
+    height: 720px;
     color: #fff;
     z-index: 1;
     width:100%;
+}
+
+.hero-text-wrap {
+    margin: 0 auto;
 }
 
 .hero h1{
@@ -90,3 +94,23 @@ footer .social-icons{
 footer .social-icons i {
     padding: 0 12px;
 }
+
+@media (max-width: 992px) {
+    .article {
+        margin-bottom: 40px;
+    }
+    .hero {
+        height: 540px;
+    }
+ }
+
+@media (max-width: 768px) { 
+    .hero-text h3{
+        font-size: 36px;
+        padding-top: 0;
+    }
+    .hero {
+        height: 320px;
+    }
+ }
+

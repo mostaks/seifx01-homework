@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+
+  <div class="input-box col-md-12">
+    <div class="card text-center">
+      <div class="card-body">
+        <h1 class="card-title">All Oceans</h1>
+        <p class="card-text">this page has oceans</p>
+        <a href="/oceans/new" class="btn btn-primary">Add a ocean</a>
+      </div>
+    </div>
+  </div>
+
+
+  <% @oceans.each do |ocean| %>
+    <div class="input-box col-sm-12 col-md-6 col-lg-4">
+      <div class="card" style="width: 18rem;">
+        <img src=<%= ocean.image %> class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= ocean.name %></h5>
+          <p class="card-text"><%= ocean.description %></p>
+          <p class="card-text">Rating: <%= ocean.rating %></p>
+          <a href="/oceans/<%= ocean.id %>" class="btn btn-primary">Edit</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  </div>
+</div>

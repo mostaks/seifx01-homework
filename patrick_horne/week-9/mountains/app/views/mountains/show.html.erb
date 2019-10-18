@@ -1,0 +1,15 @@
+<div class="jumbotron">
+<button type="button" class="btn btn-primary" onclick="location.href='/index'">Back</button>
+  <h1 class="display-4"><%= @mountain.name %></h1>    
+  <hr class="my-4">
+  <p class="lead"><%= @mountain.name %> is situated in <%= @mountain.country %>. It stands <%= @mountain.height_metres %> metres tall and was first ascended in <%= @mountain.first_ascent %></p>
+  <p>Height: <%= @mountain.height_metres %> m / <%= (@mountain.height_metres * 3.28084).to_i %> ft.</p>
+  <p>Country: <%= @mountain.country %></p>
+  <p>First Ascent: <%= @mountain.first_ascent %></p>
+
+  <button type="button" class="btn btn-primary" onclick="location.href='/<%= @mountain.id %>/edit'">Edit</button>
+  <form method="delete">
+    <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+
+</div>

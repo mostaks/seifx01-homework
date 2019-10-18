@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+
+  <div class="input-box col-md-12">
+    <div class="card text-center">
+      <div class="card-body">
+        <h1 class="card-title">All Movies</h1>
+        <p class="card-text">this page has movies</p>
+        <a href="/movies/new" class="btn btn-primary">Add a movie</a>
+      </div>
+    </div>
+  </div>
+
+
+  <% @movies.each do |movie| %>
+    <div class="input-box col-sm-12 col-md-6 col-lg-4">
+      <div class="card" style="width: 18rem;">
+        <img src=<%= movie.image %> class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= movie.name %></h5>
+          <p class="card-text"><%= movie.description %></p>
+          <p class="card-text">Rating: <%= movie.rating %></p>
+          <a href="/movies/<%= movie.id %>" class="btn btn-primary">Edit</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  </div>
+</div>

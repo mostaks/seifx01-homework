@@ -1,0 +1,3534 @@
+Started GET "/" for 127.0.0.1 at 2019-10-12 12:01:32 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: planets: SELECT "planets".* FROM "planets"):
+    1: <h1>All Planets</h1>
+    2: 
+    3: <% @planets.each do |planet| %>
+    4:   <p>
+    5:     <%= link_to planet.name, planet_path(planet.id) %>
+    6:     has
+  
+app/views/planets/index.html.erb:3:in `_app_views_planets_index_html_erb__3015220111847851724_70258261700440'
+Started GET "/" for 127.0.0.1 at 2019-10-12 12:02:23 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: planets: SELECT "planets".* FROM "planets"):
+    1: <h1>All Planets</h1>
+    2: 
+    3: # <% @planets.each do |planet| %>
+    4: #   <p>
+    5: #     <%= link_to planet.name, planet_path(planet.id) %>
+    6: #     has
+  
+app/views/planets/index.html.erb:3:in `_app_views_planets_index_html_erb__3015220111847851724_70258260763500'
+Started GET "/" for 127.0.0.1 at 2019-10-12 12:08:44 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (9.9ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 561ms (Views: 545.6ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/planets/new" for 127.0.0.1 at 2019-10-12 12:08:47 +1100
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 12:08:48 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 46ms (Views: 40.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 12:08:49 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 33.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 12:08:49 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets/new" for 127.0.0.1 at 2019-10-12 12:09:04 +1100
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 70ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/planets" for 127.0.0.1 at 2019-10-12 12:09:43 +1100
+Processing by PlanetsController#create as HTML
+  Parameters: {"name"=>"Earth", "image"=>"https://previews.123rf.com/images/robertsrob/robertsrob1707/robertsrob170700004/81493008-earth-globe-isolated-on-white-background-elements-of-this-image-furnished-by-nasa.jpg", "orbit"=>"123", "diameter"=>"1", "mass"=>"123", "moons"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:21
+  [1m[36mPlanet Create (2.9ms)[0m  [1m[32mINSERT INTO "planets" ("name", "image", "orbit", "diameter", "mass", "moons") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Earth"], ["image", "https://previews.123rf.com/images/robertsrob/robertsrob1707/robertsrob170700004/81493008-earth-globe-isolated-on-white-background-elements-of-this-image-furnished-by-nasa.jpg"], ["orbit", 123.0], ["diameter", 1.0], ["mass", 123.0], ["moons", 6]]
+  ↳ app/controllers/planets_controller.rb:21
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:21
+Redirected to http://localhost:3000/planets/1
+Completed 302 Found in 47ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/planets/1" for 127.0.0.1 at 2019-10-12 12:09:43 +1100
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:7
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets/1" for 127.0.0.1 at 2019-10-12 12:17:33 +1100
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (1.2ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:7
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 38.5ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/planets/1" for 127.0.0.1 at 2019-10-12 12:17:39 +1100
+Processing by PlanetsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m2ufu5Nlx6v0yD94orBpIboIq3mzSlsCdZ85YeqdoOi5p9aUUUAM8U7HAcsRH9r6gM0H+nwWcckK/8+YuQs7+Q==", "id"=>"1"}
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:42
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/planets_controller.rb:43
+  [1m[36mPlanet Destroy (4.7ms)[0m  [1m[31mDELETE FROM "planets" WHERE "planets"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/planets_controller.rb:43
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/planets_controller.rb:43
+Redirected to http://localhost:3000/planets
+Completed 302 Found in 16ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 12:17:39 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 12:22:33 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 12:32:20 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 49ms (Views: 40.0ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[36mPlanet Create (1.9ms)[0m  [1m[32mINSERT INTO "planets" ("name", "orbit", "diameter", "mass", "moons") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Earth"], ["orbit", 1.0], ["diameter", 1.0], ["mass", 1.0], ["moons", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mPlanet Create (0.5ms)[0m  [1m[32mINSERT INTO "planets" ("name", "orbit", "diameter", "mass", "moons") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mars"], ["orbit", 687.0], ["diameter", 0.2], ["mass", 2.0], ["moons", 2]]
+  ↳ db/seeds.rb:12
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mPlanet Create (0.6ms)[0m  [1m[32mINSERT INTO "planets" ("name", "orbit", "diameter", "mass", "moons") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Venus"], ["orbit", 0.7], ["diameter", 0.1], ["mass", 0.7], ["moons", 3]]
+  ↳ db/seeds.rb:13
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPlanet Create (0.3ms)[0m  [1m[32mINSERT INTO "planets" ("name", "orbit", "diameter", "mass", "moons") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jupiter"], ["orbit", 800.0], ["diameter", 500.0], ["mass", 10000.0], ["moons", 79]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ db/seeds.rb:16
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 12:33:10 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.9ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 28ms (Views: 24.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 13:50:49 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.7ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 81ms (Views: 66.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 13:50:50 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 14:43:13 +1100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.6ms)
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 14:43:22 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 611ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root_path' for #<#<Class:0x00007fcc8cd8f828>:0x00007fcc8cd8d6b8>
+Did you mean?  font_path):
+    12:   <body>
+    13:     <div class="container">
+    14:       <nav>
+    15:         <%= link_to 'Home', root_path %>
+    16:         <%= link_to 'All Planets', planets_path %>
+    17:         <%= link_to 'New Planet', planets_new_path %>
+    18:       </nav>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb__421786869696916339_70258256554120'
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 14:44:51 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 60ms (Views: 52.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/planets/1" for 127.0.0.1 at 2019-10-12 15:55:23 +1100
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (1.6ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:7
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 65ms (Views: 48.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 15:55:28 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: movies: SELECT "movies".* FROM "movies"):
+    1: <h1>All Movies</h1>
+    2: 
+    3: <% @movies.each do |movie| %>
+    4:   <p>
+    5:     <%= link_to movie.name, mvoie_path(movie.id) %>
+    6:   </p>
+  
+app/views/movies/index.html.erb:3:in `_app_views_movies_index_html_erb___3578402858729791866_70258288249080'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 15:59:22 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (178.1ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 2.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `mvoie_path' for #<#<Class:0x00007fcc90a08958>:0x00007fcc8bf20490>
+Did you mean?  movie_path
+               movies_path):
+    2: 
+    3: <% @movies.each do |movie| %>
+    4:   <p>
+    5:     <%= link_to movie.name, mvoie_path(movie.id) %>
+    6:   </p>
+    7: <% end %>
+  
+app/views/movies/index.html.erb:5:in `block in _app_views_movies_index_html_erb___3578402858729791866_70258248976060'
+app/views/movies/index.html.erb:3:in `_app_views_movies_index_html_erb___3578402858729791866_70258248976060'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 15:59:58 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2019-10-12 16:00:00 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 42ms (Views: 37.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2019-10-12 16:00:04 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 44ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:00:07 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 44ms (Views: 37.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:00:10 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:00:11 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:00:15 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 62ms (Views: 59.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:02:23 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:02:25 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 48ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:07:21 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 173ms (Views: 161.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:07:32 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:09:55 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 54ms (Views: 48.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:09:56 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movie" for 127.0.0.1 at 2019-10-12 16:11:08 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/movie"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:11:11 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:11:46 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 39ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:11:47 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2019-10-12 16:12:28 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 33ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:12:40 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 63ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:12:40 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:12:41 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:12:54 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:13:13 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:13:13 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:13:17 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:13:56 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 50ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:14:29 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:15:53 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:22:24 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/config
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/images
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/stylesheets
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__421786869696916339_70258261019820'
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:26:04 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/config
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/images
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/stylesheets
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__421786869696916339_70258277002440'
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:26:47 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:32:23 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/config
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/images
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/stylesheets
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__421786869696916339_70258256898920'
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:33:08 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 48ms (Views: 41.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:36:45 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: bootstrap.
+Load paths:
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/config
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/images
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/assets/stylesheets
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actioncable-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activestorage-5.2.2/app/assets/javascripts
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/actionview-5.2.2/lib/assets/compiled
+  /Users/a00/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+  
+app/assets/stylesheets/application.scss:16
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__421786869696916339_70258257574240'
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:37:25 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (2.9ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 8216ms (Views: 8142.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:39:47 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (2.1ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 148ms (Views: 141.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:39:49 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 77ms (Views: 75.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:40:09 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:40:14 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 16:40:15 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 145ms (Views: 143.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 16:40:16 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 78ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-12 16:40:17 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 90ms (Views: 87.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 16:40:17 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 16:41:08 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 80ms (Views: 74.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:41:10 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 109ms (Views: 95.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 16:41:11 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 114ms (Views: 111.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:41:11 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 141ms (Views: 139.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:41:25 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:43:10 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (512.8ms)
+Completed 500 Internal Server Error in 518ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x00007fc6f8da7c78>:0x00007fc6fd160e10>
+Did you mean?  @movies):
+    15: <% end %>
+    16: 
+    17: <div class="card" style="width: 18rem;">
+    18:   <img src=<%= movie.image %> class="card-img-top" alt="...">
+    19:   <div class="card-body">
+    20:     <h5 class="card-title"><%= movie.name%></h5>
+    21:     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  
+app/views/movies/index.html.erb:18:in `_app_views_movies_index_html_erb___303745676451562561_70246313169280'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:43:56 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 171ms (Views: 168.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:44:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 106ms (Views: 103.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:45:22 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 121ms (Views: 119.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:47:02 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 121ms (Views: 115.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/:id" for 127.0.0.1 at 2019-10-12 16:47:04 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>":id"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 32ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=:id):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:47:05 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 127ms (Views: 123.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:47:57 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 69ms (Views: 67.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies//movies/1" for 127.0.0.1 at 2019-10-12 16:47:59 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/movies/movies/1"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:48:02 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:48:10 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2019-10-12 16:49:28 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 106ms (Views: 101.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:50:19 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 108ms (Views: 105.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:51:00 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 95ms (Views: 93.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:51:31 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 130ms (Views: 109.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2019-10-12 16:51:33 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 151ms (Views: 134.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:52:32 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (468.9ms)
+Completed 500 Internal Server Error in 474ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x00007fc6f8da7c78>:0x00007fc6fe068b38>
+Did you mean?  @movies):
+    13: <% end %>
+    14: 
+    15: #<p>
+    16: #  <%= link_to movie.name, movie_path(movie.id) %>
+    17: #</p>
+  
+app/views/movies/index.html.erb:16:in `_app_views_movies_index_html_erb___303745676451562561_70246321048100'
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 16:52:50 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 181ms (Views: 175.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:52:52 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (523.3ms)
+Completed 500 Internal Server Error in 529ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x00007fc6f8da7c78>:0x00007fc6f8d47238>
+Did you mean?  @movies):
+    13: <% end %>
+    14: 
+    15: #<p>
+    16: #  <%= link_to movie.name, movie_path(movie.id) %>
+    17: #</p>
+  
+app/views/movies/index.html.erb:16:in `_app_views_movies_index_html_erb___303745676451562561_70246277463440'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:53:02 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 87ms (Views: 85.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:53:14 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:3
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:54:47 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:17
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 101ms (Views: 98.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:55:07 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:17
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:55:21 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:14
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:55:37 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:11
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/add" for 127.0.0.1 at 2019-10-12 16:55:42 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"add"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=add):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:55:50 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:11
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:55:51 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:11
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 151ms (Views: 146.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-10-12 16:55:59 +1100
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  Rendered movies/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:56:29 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:11
+  Rendered movies/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 56ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:59:11 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 112ms (Views: 110.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 16:59:40 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 122ms (Views: 119.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:00:24 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 104ms (Views: 102.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:01:01 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 90ms (Views: 78.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:01:15 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 96ms (Views: 88.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:01:26 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2019-10-12 17:01:27 +1100
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  Rendered movies/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:01:59 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 117ms (Views: 114.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:12 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:27 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 84ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:37 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 62ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:02:45 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 76ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:46 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 168ms (Views: 164.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:02:48 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 93ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:50 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:02:50 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 90ms (Views: 87.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:51 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 126ms (Views: 124.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:02:51 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 82ms (Views: 80.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:02:52 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 164ms (Views: 162.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:02:53 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:3
+  Rendered planets/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 129ms (Views: 127.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:03:55 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:09 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:16 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:22 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 86ms (Views: 83.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:22 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:23 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 97ms (Views: 94.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:24 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 81ms (Views: 77.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:25 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 124ms (Views: 122.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:26 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 166ms (Views: 164.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:28 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 96ms (Views: 91.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:30 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 96ms (Views: 93.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:31 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:32 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 85ms (Views: 80.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:32 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 107ms (Views: 103.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:33 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 94ms (Views: 92.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:04:33 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 111ms (Views: 109.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:04:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 74ms (Views: 72.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:05:02 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 153ms (Views: 147.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-10-12 17:05:04 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 72ms (Views: 64.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-10-12 17:05:40 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 91ms (Views: 88.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/movies/2" for 127.0.0.1 at 2019-10-12 17:05:44 +1100
+Processing by MoviesController#update as HTML
+  Parameters: {"name"=>"7 pounds", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"man donates", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[36mMovie Update (1.8ms)[0m  [1m[33mUPDATE "movies" SET "image" = ? WHERE "movies"."id" = ?[0m  [["image", "https://www.placecage.com/gif/284/196"], ["id", 2]]
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 13ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:05:44 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:05:46 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2019-10-12 17:06:06 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 98ms (Views: 92.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3/edit" for 127.0.0.1 at 2019-10-12 17:06:07 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 105ms (Views: 101.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/movies/3" for 127.0.0.1 at 2019-10-12 17:06:11 +1100
+Processing by MoviesController#update as HTML
+  Parameters: {"name"=>"Fox and the Hound", "image"=>"https://www.placecage.com/c/140/200", "description"=>"fox bad?", "rating"=>"10/10", "id"=>"3"}
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[36mMovie Update (1.0ms)[0m  [1m[33mUPDATE "movies" SET "image" = ? WHERE "movies"."id" = ?[0m  [["image", "https://www.placecage.com/c/140/200"], ["id", 3]]
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 11ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2019-10-12 17:06:11 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 110ms (Views: 106.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:06:13 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2019-10-12 17:06:29 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (2.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 98ms (Views: 90.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2019-10-12 17:06:31 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 77.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/movies/1" for 127.0.0.1 at 2019-10-12 17:06:34 +1100
+Processing by MoviesController#update as HTML
+  Parameters: {"name"=>"Chef", "image"=>"https://www.placecage.com/g/155/300", "description"=>"man cooks", "rating"=>"6/10", "id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:29
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[36mMovie Update (0.9ms)[0m  [1m[33mUPDATE "movies" SET "image" = ? WHERE "movies"."id" = ?[0m  [["image", "https://www.placecage.com/g/155/300"], ["id", 1]]
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2019-10-12 17:06:34 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:06:37 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 97ms (Views: 90.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:06:57 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:07:05 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 133ms (Views: 130.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:07:11 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 86ms (Views: 76.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:16:28 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 121ms (Views: 111.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:16:38 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 145ms (Views: 141.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2019-10-12 17:16:43 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2019-10-12 17:16:55 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:16:58 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 78ms (Views: 72.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:17:02 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 74ms (Views: 72.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:17:23 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (2.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 99ms (Views: 90.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/planets/new" for 127.0.0.1 at 2019-10-12 17:17:24 +1100
+Processing by PlanetsController#new as HTML
+  Rendering planets/new.html.erb within layouts/application
+  Rendered planets/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 114ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:17:28 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:28 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (2.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 127ms (Views: 121.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:17:28 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:29 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 192ms (Views: 190.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 136ms (Views: 134.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 136ms (Views: 134.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 272ms (Views: 269.7ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 164ms (Views: 160.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:35 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:35 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:35 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 156ms (Views: 154.1ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 449ms (Views: 437.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:35 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 278ms (Views: 274.5ms | ActiveRecord: 1.9ms)
+
+
+Completed 200 OK in 146ms (Views: 143.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:35 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 69ms (Views: 67.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:41 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 153ms (Views: 149.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:44 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 84ms (Views: 80.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:45 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:17:45 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 117ms (Views: 114.9ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 247ms (Views: 245.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:21:17 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 136ms (Views: 128.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:21:18 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (2.0ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 108ms (Views: 97.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:21:18 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:21:20 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 120ms (Views: 114.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:21:20 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 97ms (Views: 95.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:21:36 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 134ms (Views: 115.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:21:44 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 129ms (Views: 121.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets/1" for 127.0.0.1 at 2019-10-12 17:21:46 +1100
+Processing by PlanetsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT  "planets".* FROM "planets" WHERE "planets"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/planets_controller.rb:7
+  Rendering planets/show.html.erb within layouts/application
+  Rendered planets/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 77ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-10-12 17:21:50 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 77ms (Views: 64.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-10-12 17:22:06 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 111ms (Views: 103.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies/2/edit?name=7+pounds&image=https%3A%2F%2Fwww.placecage.com%2Fgif%2F284%2F196&description=S%3E+body+parts&rating=9%2F10" for 127.0.0.1 at 2019-10-12 17:22:29 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"name"=>"7 pounds", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"S> body parts", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 126ms (Views: 118.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2/edit?name=7+pounds&image=https%3A%2F%2Fwww.placecage.com%2Fgif%2F284%2F196&description=S%3E+body+parts&rating=9%2F10" for 127.0.0.1 at 2019-10-12 17:23:07 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"name"=>"7 pounds", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"S> body parts", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/movies/2" for 127.0.0.1 at 2019-10-12 17:23:12 +1100
+Processing by MoviesController#update as HTML
+  Parameters: {"name"=>"7 pounds", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"S> body parts", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[36mMovie Update (1.1ms)[0m  [1m[33mUPDATE "movies" SET "description" = ? WHERE "movies"."id" = ?[0m  [["description", "S> body parts"], ["id", 2]]
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 15ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:23:12 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 92ms (Views: 87.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2/edit" for 127.0.0.1 at 2019-10-12 17:23:16 +1100
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:25
+  Rendering movies/edit.html.erb within layouts/application
+  Rendered movies/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 82ms (Views: 78.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/movies/2" for 127.0.0.1 at 2019-10-12 17:23:24 +1100
+Processing by MoviesController#update as HTML
+  Parameters: {"name"=>"7 pounds", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"Body parts are free", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[36mMovie Update (1.9ms)[0m  [1m[33mUPDATE "movies" SET "description" = ? WHERE "movies"."id" = ?[0m  [["description", "Body parts are free"], ["id", 2]]
+  ↳ app/controllers/movies_controller.rb:34
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:34
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 13ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2019-10-12 17:23:24 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+  Rendering movies/show.html.erb within layouts/application
+  Rendered movies/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 102ms (Views: 99.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:23:29 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:24:20 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.6ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 140ms (Views: 132.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:24:21 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 128ms (Views: 118.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:24:22 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 109ms (Views: 105.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-12 17:24:33 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:24:35 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 71ms (Views: 65.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:42:20 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 200ms (Views: 187.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/movies/search?query=7" for 127.0.0.1 at 2019-10-12 17:42:24 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"7", "id"=>"search"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/search?query=7" for 127.0.0.1 at 2019-10-12 17:42:59 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"7", "id"=>"search"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/search?query=7" for 127.0.0.1 at 2019-10-12 17:45:01 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"7", "id"=>"search"}
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 7ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/search?query=7" for 127.0.0.1 at 2019-10-12 17:46:01 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"7", "id"=>"search"}
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 10ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/search?query=fox" for 127.0.0.1 at 2019-10-12 17:46:09 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"fox", "id"=>"search"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/" for 127.0.0.1 at 2019-10-12 17:48:50 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 155ms (Views: 147.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:48:53 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:49:00 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 71ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:49:10 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:49:36 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 101ms (Views: 96.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/search?query=512" for 127.0.0.1 at 2019-10-12 17:49:39 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"512", "id"=>"search"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies" for 127.0.0.1 at 2019-10-12 17:50:12 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/search?query=234" for 127.0.0.1 at 2019-10-12 17:50:15 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"234", "id"=>"search"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/search?query=234" for 127.0.0.1 at 2019-10-12 17:57:41 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"234", "id"=>"search"}
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 12ms (ActiveRecord: 3.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies/search?query=7" for 127.0.0.1 at 2019-10-12 17:57:54 +1100
+Processing by MoviesController#show as HTML
+  Parameters: {"query"=>"7", "id"=>"search"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:8
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=search):
+  
+app/controllers/movies_controller.rb:8:in `show'
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 21:27:52 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (5.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 798ms (Views: 687.5ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-14 21:27:56 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 70ms (Views: 62.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-14 21:47:34 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (1.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 102ms (Views: 98.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-14 21:48:02 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 62ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-14 21:48:09 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 21:48:15 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 116ms (Views: 112.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 21:48:17 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 102ms (Views: 96.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 21:48:18 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 21:48:18 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 92ms (Views: 87.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 21:48:19 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/mountains"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 21:48:21 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 21:48:32 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 21:48:48 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 128ms (Views: 126.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 21:48:49 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/mountains"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 21:48:50 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 56ms (Views: 52.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:20:56 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 22:20:57 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.4ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 102ms (Views: 97.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:20:58 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (1.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: mountains: SELECT "mountains".* FROM "mountains"):
+    12:   </div>
+    13: 
+    14: 
+    15:   <% @mountains.each do |mountain| %>
+    16:     <div class="input-box col-sm-12 col-md-6 col-lg-4">
+    17:       <div class="card" style="width: 18rem;">
+    18:         <img src=<%= mountain.image %> class="card-img-top" alt="...">
+  
+app/views/mountains/index.html.erb:15:in `_app_views_mountains_index_html_erb___2750547478017296563_70117706189860'
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 22:21:01 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 67ms (Views: 64.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:22:37 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:25:43 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (3.1ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 927ms (Views: 804.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:25:46 +1100
+  
+LoadError (Unable to autoload constant OceansController, expected /Users/a00/Desktop/seifx01/class/class_work/2019-10-12/solar_system/app/controllers/oceans_controller.rb to define it):
+  
+activesupport (5.2.2) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:16:in `allow_bootsnap_retry'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:57:in `load_missing_constant'
+activesupport (5.2.2) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.2) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.2) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:26:20 +1100
+Processing by OceansController#index as HTML
+Completed 406 Not Acceptable in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (OceansController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-10-14 22:26:55 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 468ms (Views: 419.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:26:57 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 80ms (Views: 72.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:26:58 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 94ms (Views: 88.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:26:59 +1100
+Processing by OceansController#index as HTML
+Completed 406 Not Acceptable in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (OceansController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.2) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:28:26 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.8ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 72ms (Views: 67.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/oceans/1" for 127.0.0.1 at 2019-10-14 22:28:31 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 127ms (Views: 96.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oceans/1/edit" for 127.0.0.1 at 2019-10-14 22:28:32 +1100
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:25
+  Rendering oceans/edit.html.erb within layouts/application
+  Rendered oceans/edit.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 83ms (Views: 77.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/oceans/1" for 127.0.0.1 at 2019-10-14 22:28:47 +1100
+Processing by OceansController#update as HTML
+  Parameters: {"name"=>"Pacific", "image"=>"https://www.placecage.com/c/460/300", "description"=>"pacific ocean", "rating"=>"6/10", "id"=>"1"}
+  [1m[36mOcean Load (0.6ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/oceans_controller.rb:34
+  [1m[36mOcean Update (2.3ms)[0m  [1m[33mUPDATE "oceans" SET "name" = ?, "description" = ? WHERE "oceans"."id" = ?[0m  [["name", "Pacific"], ["description", "pacific ocean"], ["id", 1]]
+  ↳ app/controllers/oceans_controller.rb:34
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/oceans_controller.rb:34
+Redirected to http://localhost:3000/oceans/1
+Completed 302 Found in 13ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/oceans/1" for 127.0.0.1 at 2019-10-14 22:28:47 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 109ms (Views: 105.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:28:51 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:28:55 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 69ms (Views: 66.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:28:56 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 83ms (Views: 80.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:28:57 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 146ms (Views: 139.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:28:57 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 97ms (Views: 93.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:28:58 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 81ms (Views: 78.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2019-10-14 22:29:13 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.5ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 74ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mountains/1/edit" for 127.0.0.1 at 2019-10-14 22:29:15 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:25
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 74.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/mountains/1" for 127.0.0.1 at 2019-10-14 22:29:33 +1100
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Uluru", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"australia rock", "rating"=>"6/10", "id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mountains_controller.rb:34
+  [1m[36mMountain Update (0.8ms)[0m  [1m[33mUPDATE "mountains" SET "image" = ?, "description" = ? WHERE "mountains"."id" = ?[0m  [["image", "https://www.placecage.com/gif/284/196"], ["description", "australia rock"], ["id", 1]]
+  ↳ app/controllers/mountains_controller.rb:34
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mountains_controller.rb:34
+Redirected to http://localhost:3000/mountains/1
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/mountains/1" for 127.0.0.1 at 2019-10-14 22:29:33 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 64ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:29:37 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 74ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:29:38 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/2" for 127.0.0.1 at 2019-10-14 22:29:40 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 85ms (Views: 79.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/2/edit" for 127.0.0.1 at 2019-10-14 22:29:43 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:25
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 83ms (Views: 80.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/mountains/2" for 127.0.0.1 at 2019-10-14 22:29:57 +1100
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Mt Fuji", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"Japan mountain", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mountains_controller.rb:34
+  [1m[36mMountain Update (1.1ms)[0m  [1m[33mUPDATE "mountains" SET "name" = ?, "image" = ?, "description" = ? WHERE "mountains"."id" = ?[0m  [["name", "Mt Fuji"], ["image", "https://www.placecage.com/gif/284/196"], ["description", "Japan mountain"], ["id", 2]]
+  ↳ app/controllers/mountains_controller.rb:34
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mountains_controller.rb:34
+Redirected to http://localhost:3000/mountains/2
+Completed 302 Found in 13ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/mountains/2" for 127.0.0.1 at 2019-10-14 22:29:57 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 89ms (Views: 85.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:30:00 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:30:01 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 80ms (Views: 75.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/3" for 127.0.0.1 at 2019-10-14 22:30:03 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 125ms (Views: 121.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains/3/edit" for 127.0.0.1 at 2019-10-14 22:30:04 +1100
+Processing by MountainsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:25
+  Rendering mountains/edit.html.erb within layouts/application
+  Rendered mountains/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/mountains/3" for 127.0.0.1 at 2019-10-14 22:30:23 +1100
+Processing by MountainsController#update as HTML
+  Parameters: {"name"=>"Snowy Mountain", "image"=>"https://www.placecage.com/gif/284/196", "description"=>"snow", "rating"=>"10/10", "id"=>"3"}
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mountains_controller.rb:34
+  [1m[36mMountain Update (2.1ms)[0m  [1m[33mUPDATE "mountains" SET "name" = ?, "image" = ?, "description" = ? WHERE "mountains"."id" = ?[0m  [["name", "Snowy Mountain"], ["image", "https://www.placecage.com/gif/284/196"], ["description", "snow"], ["id", 3]]
+  ↳ app/controllers/mountains_controller.rb:34
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mountains_controller.rb:34
+Redirected to http://localhost:3000/mountains/3
+Completed 302 Found in 12ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/mountains/3" for 127.0.0.1 at 2019-10-14 22:30:23 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 67ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:30:27 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains/4" for 127.0.0.1 at 2019-10-14 22:30:30 +1100
+Processing by MountainsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMountain Load (0.1ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:8
+  Rendering mountains/show.html.erb within layouts/application
+  Rendered mountains/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 102ms (Views: 99.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/mountains/4" for 127.0.0.1 at 2019-10-14 22:30:33 +1100
+Processing by MountainsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GOMMkKkI4UKi5DfMoGl/d9wltSm7jVVa/6aRTXwMsSUtctS6jalmD4GChv/fjroiRY6dpGG9PPgk4pkIHCTX4w==", "id"=>"4"}
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT  "mountains".* FROM "mountains" WHERE "mountains"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/mountains_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mountains_controller.rb:40
+  [1m[36mMountain Destroy (1.2ms)[0m  [1m[31mDELETE FROM "mountains" WHERE "mountains"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/mountains_controller.rb:40
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mountains_controller.rb:40
+Redirected to http://localhost:3000/mountains
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:30:33 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:30:40 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/4" for 127.0.0.1 at 2019-10-14 22:30:42 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 83ms (Views: 78.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/oceans/4" for 127.0.0.1 at 2019-10-14 22:30:44 +1100
+Processing by OceansController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AyAmH1YbILepWdFVytEif7nfuWlzRFJP2wHkrP5PUbRANw0kEZPXkMv/bWxeeELlBiRQHOTHBcLLhd3qSxzu8A==", "id"=>"4"}
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:39
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/oceans_controller.rb:40
+  [1m[36mOcean Destroy (0.6ms)[0m  [1m[31mDELETE FROM "oceans" WHERE "oceans"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/oceans_controller.rb:40
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/oceans_controller.rb:40
+Redirected to http://localhost:3000/oceans
+Completed 302 Found in 13ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:30:44 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 59ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oceans/2" for 127.0.0.1 at 2019-10-14 22:30:49 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 83ms (Views: 78.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/2/edit" for 127.0.0.1 at 2019-10-14 22:30:51 +1100
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:25
+  Rendering oceans/edit.html.erb within layouts/application
+  Rendered oceans/edit.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 73ms (Views: 70.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/oceans/2" for 127.0.0.1 at 2019-10-14 22:31:02 +1100
+Processing by OceansController#update as HTML
+  Parameters: {"name"=>"atlantic ocean", "image"=>"https://www.placecage.com/c/460/300", "description"=>"salmon.", "rating"=>"9/10", "id"=>"2"}
+  [1m[36mOcean Load (0.5ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/oceans_controller.rb:34
+  [1m[36mOcean Update (1.0ms)[0m  [1m[33mUPDATE "oceans" SET "name" = ?, "description" = ? WHERE "oceans"."id" = ?[0m  [["name", "atlantic ocean"], ["description", "salmon."], ["id", 2]]
+  ↳ app/controllers/oceans_controller.rb:34
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/oceans_controller.rb:34
+Redirected to http://localhost:3000/oceans/2
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/oceans/2" for 127.0.0.1 at 2019-10-14 22:31:02 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:31:04 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 65ms (Views: 60.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:31:05 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans/3" for 127.0.0.1 at 2019-10-14 22:31:07 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 74ms (Views: 70.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oceans/3/edit" for 127.0.0.1 at 2019-10-14 22:31:09 +1100
+Processing by OceansController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:25
+  Rendering oceans/edit.html.erb within layouts/application
+  Rendered oceans/edit.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/oceans/3" for 127.0.0.1 at 2019-10-14 22:31:38 +1100
+Processing by OceansController#update as HTML
+  Parameters: {"name"=>"another ocean", "image"=>"https://www.placecage.com/c/460/300", "description"=>"yes", "rating"=>"10/10", "id"=>"3"}
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:29
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/oceans_controller.rb:34
+  [1m[36mOcean Update (0.6ms)[0m  [1m[33mUPDATE "oceans" SET "name" = ?, "description" = ? WHERE "oceans"."id" = ?[0m  [["name", "another ocean"], ["description", "yes"], ["id", 3]]
+  ↳ app/controllers/oceans_controller.rb:34
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/oceans_controller.rb:34
+Redirected to http://localhost:3000/oceans/3
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/oceans/3" for 127.0.0.1 at 2019-10-14 22:31:38 +1100
+Processing by OceansController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT  "oceans".* FROM "oceans" WHERE "oceans"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/oceans_controller.rb:8
+  Rendering oceans/show.html.erb within layouts/application
+  Rendered oceans/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:31:40 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 96ms (Views: 89.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:31:44 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 71ms (Views: 69.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:31:48 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:31:51 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 82ms (Views: 75.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:31:53 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (1.0ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 134ms (Views: 131.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 22:31:54 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.5ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 77ms (Views: 73.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:31:55 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 121ms (Views: 119.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:31:56 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.4ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 84ms (Views: 81.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:31:59 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:31:59 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.3ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 89ms (Views: 82.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 22:32:32 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:32:34 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 103ms (Views: 99.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:32:35 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:32:35 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 106ms (Views: 103.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:32:36 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.3ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:32:36 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 95ms (Views: 90.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 22:32:37 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.3ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:32:44 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 145ms (Views: 141.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:32:44 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 108ms (Views: 106.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:32:45 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.4ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 78ms (Views: 74.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/oceans" for 127.0.0.1 at 2019-10-14 22:32:47 +1100
+Processing by OceansController#index as HTML
+  Rendering oceans/index.html.erb within layouts/application
+  [1m[36mOcean Load (0.2ms)[0m  [1m[34mSELECT "oceans".* FROM "oceans"[0m
+  ↳ app/views/oceans/index.html.erb:15
+  Rendered oceans/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 92ms (Views: 87.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/mountains" for 127.0.0.1 at 2019-10-14 22:32:48 +1100
+Processing by MountainsController#index as HTML
+  Rendering mountains/index.html.erb within layouts/application
+  [1m[36mMountain Load (0.2ms)[0m  [1m[34mSELECT "mountains".* FROM "mountains"[0m
+  ↳ app/views/mountains/index.html.erb:15
+  Rendered mountains/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 117ms (Views: 115.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-10-14 22:32:48 +1100
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:15
+  Rendered movies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/planets" for 127.0.0.1 at 2019-10-14 22:32:49 +1100
+Processing by PlanetsController#index as HTML
+  Rendering planets/index.html.erb within layouts/application
+  [1m[36mPlanet Load (0.2ms)[0m  [1m[34mSELECT "planets".* FROM "planets"[0m
+  ↳ app/views/planets/index.html.erb:10
+  Rendered planets/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 77ms (Views: 74.9ms | ActiveRecord: 0.2ms)
+
+

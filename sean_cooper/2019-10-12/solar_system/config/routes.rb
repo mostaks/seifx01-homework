@@ -1,0 +1,36 @@
+Rails.application.routes.draw do
+  root :to => 'planets#index'
+  get '/planets' => 'planets#index'
+  get '/planets/new' => 'planets#new'
+  post '/planets' => 'planets#create'
+  get '/planets/:id' => 'planets#show', :as => 'planet'
+  get '/planets/:id/edit' => 'planets#edit', :as => 'planet_edit'
+  post '/planets/:id' => 'planets#update'
+  delete '/planets/:id' => 'planets#destroy'
+
+  get '/movies' => 'movies#index'
+  get '/movies/new' => 'movies#new'
+  post '/movies' => 'movies#create'
+  get '/movies/:id' => 'movies#show', :as => 'movie'
+  get '/movies/:id/edit' => 'movies#edit', :as => 'movie_edit'
+  post '/movies/:id' => 'movies#update'
+  delete '/movies/:id' => 'movies#destroy'
+  get 'movies/search' => 'movies#search'
+
+  get '/mountains' => 'mountains#index'
+  get '/mountains/new' => 'mountains#new'
+  post '/mountains' => 'mountains#create'
+  get '/mountains/:id' => 'mountains#show', :as => 'mountain'
+  get '/mountains/:id/edit' => 'mountains#edit', :as => 'mountain_edit'
+  post '/mountains/:id' => 'mountains#update'
+  delete '/mountains/:id' => 'mountains#destroy'
+
+  get '/oceans' => 'oceans#index'
+  get '/oceans/new' => 'oceans#new'
+  post '/oceans' => 'oceans#create'
+  get '/oceans/:id' => 'oceans#show', :as => 'ocean'
+  get '/oceans/:id/edit' => 'oceans#edit', :as => 'ocean_edit'
+  post '/oceans/:id' => 'oceans#update'
+  delete '/oceans/:id' => 'oceans#destroy'
+
+end
