@@ -14,6 +14,7 @@ const getFormattedNumber = num => {
 	const areaCode = validNum.substr(0, 3);
 	const exchangeCode = validNum.substr(3, 3)
 	const remaining = validNum.substr(6);
+	const str = 'can you help me?';
 	return `(${areaCode}) ${exchangeCode}-${remaining}`;
 }
 
